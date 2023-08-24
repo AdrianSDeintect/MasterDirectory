@@ -1,7 +1,8 @@
-﻿import { StringEditor, BooleanEditor, PrefixedContext } from "@serenity-is/corelib";
+﻿import { IntegerEditor, StringEditor, BooleanEditor, PrefixedContext } from "@serenity-is/corelib";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface TipoCategoriasForm {
+    IdtipoCategoria: IntegerEditor;
     TipoCategoria: StringEditor;
     Activo: BooleanEditor;
 }
@@ -16,12 +17,14 @@ export class TipoCategoriasForm extends PrefixedContext {
         if (!TipoCategoriasForm.init)  {
             TipoCategoriasForm.init = true;
 
-            var w0 = StringEditor;
-            var w1 = BooleanEditor;
+            var w0 = IntegerEditor;
+            var w1 = StringEditor;
+            var w2 = BooleanEditor;
 
             initFormType(TipoCategoriasForm, [
-                'TipoCategoria', w0,
-                'Activo', w1
+                'IdtipoCategoria', w0,
+                'TipoCategoria', w1,
+                'Activo', w2
             ]);
         }
     }

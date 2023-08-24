@@ -21,7 +21,8 @@ namespace MasterDirectory.Web.Scripts
             query
              .Select(fld.IdtipoCatalogo)
              .Select(fld.TipoCatalogo)
-             .Where(fld.Activo == 1);
+             .Where(fld.Activo == 1)
+             .Where(fld.IdtipoCategoria == 1);
         }
 
     }

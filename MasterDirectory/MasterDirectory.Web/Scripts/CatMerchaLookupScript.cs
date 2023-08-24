@@ -28,25 +28,11 @@ namespace MasterDirectory.Web.Scripts
         protected override void PrepareQuery(SqlQuery query)
         {
             base.PrepareQuery(query);
-            //AddTenantFilter(query);
         }
-
-        //protected void AddTenantFilter(SqlQuery query)
-        //{
-        //    var r = new TRow();
-        //    query.Where(r.TenantIdField == UserAccessor.User.GetTenantId());
-        //}
 
         public override string GetScript()
         {
-            //return TwoLevelCache.GetLocalStoreOnly("MultiTenantLookup:" +
-            //        this.ScriptName + ":" +
-            //        UserAccessor.User.GetTenantId(),
-            //        TimeSpan.FromHours(1),
-                //new TRow().GetFields().GenerationKey, () =>
-                //{
                     return base.GetScript();
-                //});
         }
 
     }

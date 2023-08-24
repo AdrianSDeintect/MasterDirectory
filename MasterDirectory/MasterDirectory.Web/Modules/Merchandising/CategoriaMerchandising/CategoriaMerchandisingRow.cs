@@ -1,3 +1,4 @@
+using MasterDirectory.Web.Modules.Finanzas;
 using MasterDirectory.Web.Modules.Merchandising;
 using MasterDirectory.Web.Scripts;
 using Microsoft.Data.SqlClient;
@@ -15,8 +16,11 @@ namespace MasterDirectory.Merchandising;
 
 [ConnectionKey("Default"), Module("Merchandising"), TableName("CatMerchandising")]
 [DisplayName("Categoria Merchandising"), InstanceName("Categoria Merchandising")]
-[ReadPermission(MerchandisingPermissionKeys.Merchadising)]
-[ModifyPermission(MerchandisingPermissionKeys.Merchadising)]
+
+[ReadPermission(MerchandisingPermissionKeys.View)]
+[ModifyPermission(MerchandisingPermissionKeys.Modify)]
+[DeletePermission(MerchandisingPermissionKeys.Delete)]
+
 public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Local Sap"), Size(5), PrimaryKey, NotNull, IdProperty, QuickSearch, NameProperty]

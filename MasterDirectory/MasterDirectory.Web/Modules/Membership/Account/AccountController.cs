@@ -66,23 +66,22 @@ namespace MasterDirectory.Membership.Pages
                 var result = passwordValidator.Validate(ref username, request.Password);
                 if (result == PasswordValidationResult.Valid)
                 {
-
-                    //bool ValidateUserAD = LoginAuthenticator().IsUserLockedOut(username);
-                    //if (ValidateUserAD == false)
-                    //{
-                        //bool ValidateAuthAD = LoginAuthenticator().ValidateCredentials(username, request.Password);
-                        //if (ValidateAuthAD == true || username == "admin")
-                        //{
+                    bool ValidateUserAD = LoginAuthenticator().IsUserLockedOut(username);
+                    if (ValidateUserAD == false)
+                    {
+                        bool ValidateAuthAD = LoginAuthenticator().ValidateCredentials(username, request.Password);
+                        if (ValidateAuthAD == true)
+                        {
                             var principal = UserRetrieveService.CreatePrincipal(userRetriever, username, authType: "Password");
                             HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal).GetAwaiter().GetResult();
                             return new ServiceResponse();
-                        //}
-                        //else { throw new ValidationError("AuthenticationError", "Error de credenciales de ActiveDirectory"); }
-                    //}
-                    //else
-                    //{
-                    //    throw new ValidationError("AuthenticationError", "Usuario bloqueado consulte al administrador");
-                    //}
+                        }
+                        else { throw new ValidationError("AuthenticationError", "Error de credenciales de ActiveDirectory"); }
+                    }
+                    else
+                    {
+                        throw new ValidationError("AuthenticationError", "Usuario bloqueado consulte al administrador");
+                    }
                 }
 
                 throw new ValidationError("AuthenticationError", Texts.Validation.AuthenticationError.ToString(Localizer));

@@ -1,3 +1,4 @@
+using MasterDirectory.Web.Modules.Catalogos;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -9,8 +10,9 @@ namespace MasterDirectory.Catalogos;
 [LookupScript(Expiration = -1)]
 [ConnectionKey("Default"), Module("Catalogos"), TableName("Tipo_Catalogos")]
 [DisplayName("Tipo Catalogos"), InstanceName("Tipo Catalogos")]
-[ReadPermission("Administration:General")]
-[ModifyPermission("Administration:General")]
+[ReadPermission(CatalogosPermissionKeys.ViewTipoCatalogos)]
+[ModifyPermission(CatalogosPermissionKeys.ModifyTipoCatalogos)]
+[DeletePermission(CatalogosPermissionKeys.DeleteTipoCatalogos)]
 public sealed class TipoCatalogosRow : Row<TipoCatalogosRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Id Cons"), Column("idCons"), Identity, IdProperty]

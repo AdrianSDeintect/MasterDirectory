@@ -1,5 +1,5 @@
-using MasterDirectory.Catalogos;
-using MasterDirectory.Web.Modules.Merchandising;
+using MasterDirectory.Web.Modules.Catalogos;
+using MasterDirectory.Web.Scripts;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -12,8 +12,10 @@ namespace MasterDirectory.Merchandising;
 [LookupScript(Expiration = -1)]
 [ConnectionKey("Default"), Module("Merchandising"), TableName("Catalogos_Merchandising")]
 [DisplayName("Catalogos Merchandising"), InstanceName("Catalogos Merchandising")]
-[ReadPermission(MerchandisingPermissionKeys.CatalogosMerchadising)]
-[ModifyPermission(MerchandisingPermissionKeys.CatalogosMerchadising)]
+[ReadPermission(CatalogosPermissionKeys.ViewTipoCatalogos)]
+[ModifyPermission(CatalogosPermissionKeys.ModifyTipoCatalogos)]
+[DeletePermission(CatalogosPermissionKeys.DeleteTipoCatalogos)]
+
 public sealed class CatalogosMerchandisingRow : Row<CatalogosMerchandisingRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Id Cons"), Column("idCons"), Identity, IdProperty]
@@ -24,7 +26,7 @@ public sealed class CatalogosMerchandisingRow : Row<CatalogosMerchandisingRow.Ro
     }
 
     [DisplayName("Tipo Catalogo"), Column("idtipoCatalogo"), NotNull, ForeignKey("[dbo].[Tipo_Catalogos]", "idtipoCatalogo"), LeftJoin("ljTpoCatalogos"), TextualField("tipoCatalogo"), DefaultValue(1)]
-    [LookupEditor(typeof(TipoCatalogosRow)), LookupInclude]
+    [LookupEditor(typeof(TiposCatMerchaLookup)), LookupInclude]
     public int? IdtipoCatalogo
     {
         get => fields.IdtipoCatalogo[this];

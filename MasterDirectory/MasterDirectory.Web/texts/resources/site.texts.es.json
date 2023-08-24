@@ -141,5 +141,17 @@
   "Validation.InvalidResetToken": "¡Tu token para restablecer tu contraseña es inválido o ha expirado!",
   "Validation.MinRequiredPasswordLength": "¡La contraseña ingresada no tiene suficientes caracteres (mín {0})!",
   "Validation.PasswordConfirmMismatch": "¡Las contraseñas ingresadas no coinciden!",
-  "Validation.SavePrimaryKeyError": null
+  "Validation.SavePrimaryKeyError": null,
+  "Permission.Merchandising:View": "View",
+  "Permission.Merchandising:Delete": "Delete",
+  "Permission.Merchandising:Modify": "Create/Update",
+  "Permission.Finanzas:View": "View",
+  "Permission.Finanzas:Delete": "Delete",
+  "Permission.Finanzas:Modify": "Create/Update",
+  "Permission.UltimaMilla:View": "View",
+  "Permission.UltimaMilla:Delete": "Delete",
+  "Permission.UltimaMilla:Modify": "Create/Update",
+  "Permission.Consultorios:View": "View",
+  "Permission.Consultorios:Delete": "Delete",
+  "Permission.Consultorios:Modify": "Create/Update"
 }

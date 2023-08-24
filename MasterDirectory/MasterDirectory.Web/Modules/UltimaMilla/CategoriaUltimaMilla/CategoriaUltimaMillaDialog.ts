@@ -1,0 +1,11 @@
+﻿import { Decorators, EntityDialog } from '@serenity-is/corelib';
+import { CategoriaUltimaMillaForm, CategoriaUltimaMillaRow, CategoriaUltimaMillaService } from '../../ServerTypes/UltimaMilla';
+
+@Decorators.registerClass('MasterDirectory.UltimaMilla.CategoriaUltimaMillaDialog')
+export class CategoriaUltimaMillaDialog extends EntityDialog<CategoriaUltimaMillaRow, any> {
+    protected getFormKey() { return CategoriaUltimaMillaForm.formKey; }
+    protected getRowDefinition() { return CategoriaUltimaMillaRow; }
+    protected getService() { return CategoriaUltimaMillaService.baseUrl; }
+
+    protected form = new CategoriaUltimaMillaForm(this.idPrefix);
+}

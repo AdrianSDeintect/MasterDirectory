@@ -1,4 +1,5 @@
 ﻿export namespace MerchandisingPermissionKeys {
-    export const Merchadising = "Merchadising:CatMerchandising";
-    export const CatalogosMerchadising = "Merchadising:CatalogosMerchandising";
+    export const Delete = "Merchandising:Delete";
+    export const Modify = "Merchandising:Modify";
+    export const View = "Merchandising:View";
 }

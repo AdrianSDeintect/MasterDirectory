@@ -34,10 +34,10 @@ export abstract class CategoriaMerchandisingRow {
     static readonly idProperty = 'LocalSap';
     static readonly nameProperty = 'LocalSap';
     static readonly localTextPrefix = 'Merchandising.CategoriaMerchandising';
-    static readonly deletePermission = 'Merchadising:CatMerchandising';
-    static readonly insertPermission = 'Merchadising:CatMerchandising';
-    static readonly readPermission = 'Merchadising:CatMerchandising';
-    static readonly updatePermission = 'Merchadising:CatMerchandising';
+    static readonly deletePermission = 'Merchandising:Delete';
+    static readonly insertPermission = 'Merchandising:Modify';
+    static readonly readPermission = 'Merchandising:View';
+    static readonly updatePermission = 'Merchandising:Modify';
 
     static readonly Fields = fieldsProxy<CategoriaMerchandisingRow>();
 }

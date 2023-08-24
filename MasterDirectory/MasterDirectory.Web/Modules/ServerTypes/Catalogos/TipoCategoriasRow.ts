@@ -16,10 +16,10 @@ export abstract class TipoCategoriasRow {
     static getLookup() { return getLookup<TipoCategoriasRow>('Catalogos.TipoCategorias') }
     static async getLookupAsync() { return getLookupAsync<TipoCategoriasRow>('Catalogos.TipoCategorias') }
 
-    static readonly deletePermission = 'Administration:General';
-    static readonly insertPermission = 'Administration:General';
-    static readonly readPermission = 'Administration:General';
-    static readonly updatePermission = 'Administration:General';
+    static readonly deletePermission = 'Catalogos:TipoCategorias:Delete';
+    static readonly insertPermission = 'Catalogos:TipoCategorias:Modify';
+    static readonly readPermission = 'Catalogos:TipoCategorias:View';
+    static readonly updatePermission = 'Catalogos:TipoCategorias:Modify';
 
     static readonly Fields = fieldsProxy<TipoCategoriasRow>();
 }

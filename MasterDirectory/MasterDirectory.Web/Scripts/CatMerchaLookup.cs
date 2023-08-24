@@ -22,6 +22,7 @@ namespace MasterDirectory.Web.Scripts
              .Select(fld.IdCons)
              .Select(fld.Descripcion, fld.IdtipoCatalogo)
              .Where(fld.Activo == 1);
+             //.Where(fld.);
         }
 
     }

@@ -7,7 +7,6 @@ export class CategoriaMerchandisingDialog extends EntityDialog<CategoriaMerchand
 
     public dialogOpen(asPanel?: boolean): void {
         super.dialogOpen(asPanel);
-        /* this.form.VchDesPlanograma.element.focus();*/
     }
 
     protected getFormKey() { return CategoriaMerchandisingForm.formKey; }

@@ -20,10 +20,10 @@ export abstract class CatalogosMerchandisingRow {
     static getLookup() { return getLookup<CatalogosMerchandisingRow>('Merchandising.CatalogosMerchandising') }
     static async getLookupAsync() { return getLookupAsync<CatalogosMerchandisingRow>('Merchandising.CatalogosMerchandising') }
 
-    static readonly deletePermission = 'Merchadising:CatalogosMerchandising';
-    static readonly insertPermission = 'Merchadising:CatalogosMerchandising';
-    static readonly readPermission = 'Merchadising:CatalogosMerchandising';
-    static readonly updatePermission = 'Merchadising:CatalogosMerchandising';
+    static readonly deletePermission = 'Catalogos:TipoCatalogos:Delete';
+    static readonly insertPermission = 'Catalogos:TipoCatalogos:Modify';
+    static readonly readPermission = 'Catalogos:TipoCatalogos:View';
+    static readonly updatePermission = 'Catalogos:TipoCatalogos:Modify';
 
     static readonly Fields = fieldsProxy<CatalogosMerchandisingRow>();
 }

@@ -7,6 +7,7 @@ namespace MasterDirectory.Catalogos.Forms;
 [BasedOnRow(typeof(TipoCategoriasRow), CheckNames = true)]
 public class TipoCategoriasForm
 {
+    public int IdtipoCategoria { get; set; } 
     public string TipoCategoria { get; set; }
     [BooleanEditor]
     public int Activo { get; set; }
