@@ -2,6 +2,7 @@
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface CategoriaFinanzasForm {
+    LocalSap: StringEditor;
     Mercado: StringEditor;
     FechaCierre: DateEditor;
     EstatusFarmacia: LookupEditor;
@@ -33,6 +34,7 @@ export class CategoriaFinanzasForm extends PrefixedContext {
             var w2 = LookupEditor;
 
             initFormType(CategoriaFinanzasForm, [
+                'LocalSap', w0,
                 'Mercado', w0,
                 'FechaCierre', w1,
                 'EstatusFarmacia', w2,

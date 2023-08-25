@@ -109,21 +109,21 @@ public sealed class CategoriaFinanzasRow : Row<CategoriaFinanzasRow.RowFields>, 
         set => fields.KeyState[this] = value;
     }
 
-    [DisplayName("Ceco Farmacias"), Column("CECOFarmacias"), Size(250)]
+    [DisplayName("CECO Farmacias"), Column("CECOFarmacias"), Size(250)]
     public string CecoFarmacias
     {
         get => fields.CecoFarmacias[this];
         set => fields.CecoFarmacias[this] = value;
     }
 
-    [DisplayName("Ceco Consultorio"), Column("CECOConsultorio"), Size(250)]
+    [DisplayName("CECO Consultorio"), Column("CECOConsultorio"), Size(250)]
     public string CecoConsultorio
     {
         get => fields.CecoConsultorio[this];
         set => fields.CecoConsultorio[this] = value;
     }
 
-    [DisplayName("Ceco Ecommerce"), Column("CECOEcommerce"), Size(250)]
+    [DisplayName("CECO Ecommerce"), Column("CECOEcommerce"), Size(250)]
     public string CecoEcommerce
     {
         get => fields.CecoEcommerce[this];

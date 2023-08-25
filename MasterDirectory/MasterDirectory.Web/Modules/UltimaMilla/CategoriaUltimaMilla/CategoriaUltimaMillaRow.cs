@@ -10,8 +10,6 @@ namespace MasterDirectory.UltimaMilla;
 
 [ConnectionKey("Default"), Module("UltimaMilla"), TableName("CatUltimaMilla")]
 [DisplayName("Categoria Ultima Milla"), InstanceName("Categoria Ultima Milla")]
-//[ReadPermission(UltimaMillaPermissionKeys.UltimaMilla)]
-//[ModifyPermission(UltimaMillaPermissionKeys.UltimaMilla)]
 [ReadPermission(UltimaMillaPermissionKeys.View)]
 [ModifyPermission(UltimaMillaPermissionKeys.Modify)]
 [DeletePermission(UltimaMillaPermissionKeys.Delete)]
@@ -23,7 +21,7 @@ public sealed class CategoriaUltimaMillaRow : Row<CategoriaUltimaMillaRow.RowFie
         get => fields.LocalSap[this];
         set => fields.LocalSap[this] = value;
     }
-    [DisplayName("Venta Telefonica"), Column("VentaTelefonica"), QuickSearch, Size(10)]
+    [DisplayName("Venta Telefónica"), Column("VentaTelefonica"), QuickSearch, Size(10)]
     [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 31), LookupInclude]
     public string VentaTelefonica
     {
@@ -40,21 +38,21 @@ public sealed class CategoriaUltimaMillaRow : Row<CategoriaUltimaMillaRow.RowFie
     }
 
     [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 33), LookupInclude]
-    [DisplayName("Hub"), Column("HUB"), QuickSearch, Size(50)]
+    [DisplayName("HUB"), Column("HUB"), QuickSearch, Size(50)]
     public string Hub
     {
         get => fields.Hub[this];
         set => fields.Hub[this] = value;
     }
 
-    [DisplayName("E Commerce"), Size(50)]
+    [DisplayName("E-Commerce"), Column("ECommerce"), Size(50)]
     public string ECommerce
     {
         get => fields.ECommerce[this];
         set => fields.ECommerce[this] = value;
     }
 
-    [DisplayName("Tipo E Comm"), Column("TipoEComm"), QuickSearch, Size(50)]
+    [DisplayName("Tipo E-Comm"), Column("TipoEComm"), QuickSearch, Size(50)]
     [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 34), LookupInclude]
     public string TipoEComm
     {
@@ -78,7 +76,7 @@ public sealed class CategoriaUltimaMillaRow : Row<CategoriaUltimaMillaRow.RowFie
         set => fields.Tablet[this] = value;
     }
 
-    [DisplayName("N Serie"), Size(50)]
+    [DisplayName("N° Serie"),  Column("NSerie"), Size(50)]
     public string NSerie
     {
         get => fields.NSerie[this];
@@ -93,14 +91,14 @@ public sealed class CategoriaUltimaMillaRow : Row<CategoriaUltimaMillaRow.RowFie
         set => fields.EstatusTablet[this] = value;
     }
 
-    [DisplayName("Qr"), Column("QR"), Size(50)]
+    [DisplayName("QR"), Column("QR"), Size(50)]
     public string Qr
     {
         get => fields.Qr[this];
         set => fields.Qr[this] = value;
     }
 
-    [DisplayName("Servicio Domicilio"), Column("ServicioDomicilio"), QuickSearch , Size(50)]
+    [DisplayName("Servicio a Domicilio (OPE)"), Column("ServicioDomicilio"), QuickSearch , Size(50)]
     [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 38), LookupInclude]
     public string ServicioDomicilio
     {
@@ -108,7 +106,7 @@ public sealed class CategoriaUltimaMillaRow : Row<CategoriaUltimaMillaRow.RowFie
         set => fields.ServicioDomicilio[this] = value;
     }
 
-    [DisplayName("Prueba Uber"), Column("PruebaUBER"), QuickSearch, Size(50)]
+    [DisplayName("Prueba UBER"), Column("PruebaUBER"), QuickSearch, Size(50)]
     [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 39), LookupInclude]
     public string PruebaUber
     {

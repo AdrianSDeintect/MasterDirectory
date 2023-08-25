@@ -1,7 +1,8 @@
-﻿import { LookupEditor, StringEditor, PrefixedContext } from "@serenity-is/corelib";
+﻿import { StringEditor, LookupEditor, PrefixedContext } from "@serenity-is/corelib";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface CategoriaConsultoriosForm {
+    LocalSap: StringEditor;
     ConsulOperacion: LookupEditor;
     Benamedic: LookupEditor;
     RampaDiscapa: LookupEditor;
@@ -20,16 +21,17 @@ export class CategoriaConsultoriosForm extends PrefixedContext {
         if (!CategoriaConsultoriosForm.init)  {
             CategoriaConsultoriosForm.init = true;
 
-            var w0 = LookupEditor;
-            var w1 = StringEditor;
+            var w0 = StringEditor;
+            var w1 = LookupEditor;
 
             initFormType(CategoriaConsultoriosForm, [
-                'ConsulOperacion', w0,
-                'Benamedic', w0,
-                'RampaDiscapa', w0,
-                'HorarioLv', w1,
-                'HorarioS', w1,
-                'HorarioD', w1
+                'LocalSap', w0,
+                'ConsulOperacion', w1,
+                'Benamedic', w1,
+                'RampaDiscapa', w1,
+                'HorarioLv', w0,
+                'HorarioS', w0,
+                'HorarioD', w0
             ]);
         }
     }
