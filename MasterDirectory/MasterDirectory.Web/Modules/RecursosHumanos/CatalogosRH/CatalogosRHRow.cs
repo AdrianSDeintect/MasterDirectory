@@ -1,4 +1,4 @@
-using MasterDirectory.Web.Modules.Operaciones;
+using MasterDirectory.Web.Modules.RecursosHumanos;
 using MasterDirectory.Web.Scripts;
 using Serenity.ComponentModel;
 using Serenity.Data;
@@ -6,14 +6,14 @@ using Serenity.Data.Mapping;
 using System;
 using System.ComponentModel;
 
-namespace MasterDirectory.Operaciones;
+namespace MasterDirectory.RecursosHumanos;
 
-[ConnectionKey("Default"), Module("Operaciones"), TableName("Catalogos_Operaciones")]
-[DisplayName("Catalogos Operaciones"), InstanceName("Catalogos Operaciones")]
-[ReadPermission(OperacionesPermissionKeys.View)]
-[ModifyPermission(OperacionesPermissionKeys.Modify)]
-[DeletePermission(OperacionesPermissionKeys.Delete)]
-public sealed class CatalogosOperacionesRow : Row<CatalogosOperacionesRow.RowFields>, IIdRow, INameRow
+[ConnectionKey("Default"), Module("RecursosHumanos"), TableName("Catalogos_RH")]
+[DisplayName("Catalogos Rh"), InstanceName("Catalogos Rh")]
+[ReadPermission(RecursosHumanosPermissionKeys.View)]
+[ModifyPermission(RecursosHumanosPermissionKeys.Modify)]
+[DeletePermission(RecursosHumanosPermissionKeys.Delete)]
+public sealed class CatalogosRHRow : Row<CatalogosRHRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Id Cons"), Column("idCons"), Identity, IdProperty]
     public int? IdCons
@@ -22,16 +22,15 @@ public sealed class CatalogosOperacionesRow : Row<CatalogosOperacionesRow.RowFie
         set => fields.IdCons[this] = value;
     }
 
-
     [DisplayName("Tipo Catalogo"), Column("idtipoCatalogo"), NotNull, ForeignKey("[dbo].[Tipo_Catalogos]", "idtipoCatalogo"), LeftJoin("ljTpoCatalogos"), TextualField("tipoCatalogo"), DefaultValue(1)]
-    [LookupEditor(typeof(TiposCatOperacionesLookup)), LookupInclude]
+    [LookupEditor(typeof(TiposCatRHLookup)), LookupInclude]
     public int? IdtipoCatalogo
     {
         get => fields.IdtipoCatalogo[this];
         set => fields.IdtipoCatalogo[this] = value;
     }
 
-    [DisplayName("Id Clave"), Column("idClave"), NotNull, CheckboxFormatter, AlignCenter]
+    [DisplayName("Id Clave"), Column("idClave"), NotNull]
     public int? IdClave
     {
         get => fields.IdClave[this];

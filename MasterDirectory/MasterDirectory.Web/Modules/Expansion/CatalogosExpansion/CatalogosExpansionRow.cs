@@ -43,7 +43,7 @@ public sealed class CatalogosExpansionRow : Row<CatalogosExpansionRow.RowFields>
         set => fields.Descripcion[this] = value;
     }
 
-    [DisplayName("Activo"), Column("activo"), NotNull]
+    [DisplayName("Activo"), Column("activo"), NotNull, CheckboxFormatter, AlignCenter]
     public int? Activo
     {
         get => fields.Activo[this];

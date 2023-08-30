@@ -44,7 +44,7 @@ public sealed class CatalogosInmobiliariaRow : Row<CatalogosInmobiliariaRow.RowF
         set => fields.Descripcion[this] = value;
     }
 
-    [DisplayName("Activo"), Column("activo"), NotNull]
+    [DisplayName("Activo"), Column("activo"), NotNull, CheckboxFormatter, AlignCenter]
     public int? Activo
     {
         get => fields.Activo[this];
