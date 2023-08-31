@@ -6,8 +6,8 @@ using System.IO;
 
 namespace MasterDirectory.Migrations.DefaultDB
 {
-    [Migration(20230831120001)]
-    public class DefaultDB_20230831_120001_CatalogosRH : AutoReversingMigration
+    [Migration(20230831120003)]
+    public class DefaultDB_20230831_120003_CatalogosTesoreria : AutoReversingMigration
     {
         private string GetScript(string name)
         {
@@ -18,7 +18,7 @@ namespace MasterDirectory.Migrations.DefaultDB
         {
 
             IfDatabase("SqlServer", "SqlServer2000", "SqlServerCe")
-          .Execute.Sql(GetScript("MasterDirectory.Web.Migrations.scriptCatalogosRH.sql"));
+          .Execute.Sql(GetScript("MasterDirectory.Web.Migrations.scriptCatalogosTesoreria.sql"));
 
 
 
