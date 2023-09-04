@@ -1,4 +1,5 @@
 ﻿export * from "./Web/Modules.Catalogos.CatalogosPermissionKeys"
+export * from "./Web/Modules.Comerciales.ComercialesPermissionKeys"
 export * from "./Web/Modules.Consultorios.ConsultoriosPermissionKeys"
 export * from "./Web/Modules.Expansion.ExpansionPermissionKeys"
 export * from "./Web/Modules.Finanzas.FinanzasPermissionKeys"
