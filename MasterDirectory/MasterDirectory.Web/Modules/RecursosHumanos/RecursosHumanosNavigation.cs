@@ -6,5 +6,5 @@ using MyPages = MasterDirectory.RecursosHumanos.Pages;
 
 
 [assembly: NavigationMenu(9000, "Recursos Humanos", icon: "fa-users")]
-[assembly: NavigationLink(9100, "Recursos Humanos/Recursos Humanos", typeof(MyPages.CategoriaRHPage), icon: "fa-table")]
-[assembly: NavigationLink(9200, "Recursos Humanos/Catalogos Recursos Humanos", typeof(MyPages.CatalogosRHPage), icon: "fa-th")]
+[assembly: NavigationLink(9100, "Recursos Humanos/RH", typeof(MyPages.CategoriaRHPage), icon: "fa-table")]
+[assembly: NavigationLink(9200, "Recursos Humanos/Catalogos RH", typeof(MyPages.CatalogosRHPage), icon: "fa-th")]

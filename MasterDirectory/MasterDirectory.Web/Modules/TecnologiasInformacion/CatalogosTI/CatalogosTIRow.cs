@@ -1,4 +1,4 @@
-using MasterDirectory.Web.Modules.Comerciales;
+using MasterDirectory.Web.Modules.TecnologiasInformacion;
 using MasterDirectory.Web.Scripts;
 using Serenity.ComponentModel;
 using Serenity.Data;
@@ -6,14 +6,14 @@ using Serenity.Data.Mapping;
 using System;
 using System.ComponentModel;
 
-namespace MasterDirectory.Comerciales;
+namespace MasterDirectory.TecnologiasInformacion;
 
-[ConnectionKey("Default"), Module("Comerciales"), TableName("Catalogos_Comerciales")]
-[DisplayName("Catalogos Comerciales"), InstanceName("Catalogos Comerciales")]
-[ReadPermission(ComercialesPermissionKeys.View)]
-[ModifyPermission(ComercialesPermissionKeys.Modify)]
-[DeletePermission(ComercialesPermissionKeys.Delete)]
-public sealed class CatalogosComercialesRow : Row<CatalogosComercialesRow.RowFields>, IIdRow, INameRow
+[ConnectionKey("Default"), Module("TecnologiasInformacion"), TableName("Catalogos_TI")]
+[DisplayName("Catalogos TI"), InstanceName("Catalogos TI")]
+[ReadPermission(TecnologiasInformacionPermissionKeys.View)]
+[ModifyPermission(TecnologiasInformacionPermissionKeys.Modify)]
+[DeletePermission(TecnologiasInformacionPermissionKeys.Delete)]
+public sealed class CatalogosTIRow : Row<CatalogosTIRow.RowFields>, IIdRow, INameRow
 {
     [DisplayName("Id Cons"), Column("idCons"), Identity, IdProperty]
     public int? IdCons
@@ -22,8 +22,9 @@ public sealed class CatalogosComercialesRow : Row<CatalogosComercialesRow.RowFie
         set => fields.IdCons[this] = value;
     }
 
+
     [DisplayName("Tipo Catalogo"), Column("idtipoCatalogo"), NotNull, ForeignKey("[dbo].[Tipo_Catalogos]", "idtipoCatalogo"), LeftJoin("ljTpoCatalogos"), TextualField("tipoCatalogo"), DefaultValue(1)]
-    [LookupEditor(typeof(TiposCatComercialesLookup)), LookupInclude]
+    [LookupEditor(typeof(TiposCatTILookup)), LookupInclude]
     public int? IdtipoCatalogo
     {
         get => fields.IdtipoCatalogo[this];
@@ -51,21 +52,18 @@ public sealed class CatalogosComercialesRow : Row<CatalogosComercialesRow.RowFie
         set => fields.Activo[this] = value;
     }
 
-    [DisplayName("Tipo Catalogo"), Expression("ljTpoCatalogos.[tipoCatalogo]"), QuickSearch]
-    public string NombreTipoCatalogo
-    {
-        get => fields.NombreTipoCatalogo[this];
-        set => fields.NombreTipoCatalogo[this] = value;
-    }
-
-
     //[DisplayName("Dt Registro"), Column("dtRegistro"), NotNull]
     //public DateTime? DtRegistro
     //{
     //    get => fields.DtRegistro[this];
     //    set => fields.DtRegistro[this] = value;
     //}
-
+    [DisplayName("Tipo Catalogo"), Expression("ljTpoCatalogos.[tipoCatalogo]"), QuickSearch]
+    public string NombreTipoCatalogo
+    {
+        get => fields.NombreTipoCatalogo[this];
+        set => fields.NombreTipoCatalogo[this] = value;
+    }
     public class RowFields : RowFieldsBase
     {
         public Int32Field IdCons;
