@@ -6,9 +6,6 @@ export interface CategoriaTIRow {
     Emaillocal?: string;
     Extension?: string;
     Telefono?: string;
-    Nse?: string;
-    Cluster?: string;
-    Brick?: string;
 }
 
 export abstract class CategoriaTIRow {

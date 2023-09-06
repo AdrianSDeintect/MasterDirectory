@@ -13,10 +13,7 @@ CREATE TABLE [dbo].[CatTI](
 	[UsuarioGEO] [varchar](20) NULL,
 	[Emaillocal] [varchar](50) NULL,
 	[Extension] [varchar](10) NULL,
-	[Telefono] [varchar](12) NULL,
-	[NSE] [varchar](10) NULL,
-	[Cluster] [varchar](15) NULL,
-	[Brick] [varchar](15) NULL,
+	[Telefono] [varchar](50) NULL,
 	[dtRegistro] [datetime] NOT NULL,
  CONSTRAINT [PK_CatTI] PRIMARY KEY CLUSTERED 
 (

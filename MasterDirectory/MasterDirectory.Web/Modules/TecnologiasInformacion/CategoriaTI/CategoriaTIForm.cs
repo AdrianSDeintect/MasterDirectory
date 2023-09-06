@@ -9,11 +9,11 @@ public class CategoriaTIForm
 {
     [Tab("General")]
     public string LocalSap { get; set; }
-    public string Nse { get; set; }
-    public string Cluster { get; set; }
-    public string Brick { get; set; }
+    //public string Nse { get; set; }
+    //public string Cluster { get; set; }
+    //public string Brick { get; set; }
 
-    [Tab("GEO")]
+    //[Tab("GEO")]
     public string UsuarioGeo { get; set; }
     public string Emaillocal { get; set; }
     public string Extension { get; set; }

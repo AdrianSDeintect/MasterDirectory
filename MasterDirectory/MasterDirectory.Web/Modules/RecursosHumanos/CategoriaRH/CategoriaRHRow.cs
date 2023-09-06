@@ -8,7 +8,7 @@ using System.ComponentModel;
 namespace MasterDirectory.RecursosHumanos;
 
 [ConnectionKey("Default"), Module("RecursosHumanos"), TableName("CatRH")]
-[DisplayName("Categoria Rh"), InstanceName("Categoria Rh")]
+[DisplayName("Categoria RH"), InstanceName("Categoria RH")]
 [ReadPermission(RecursosHumanosPermissionKeys.View)]
 [ModifyPermission(RecursosHumanosPermissionKeys.Modify)]
 [DeletePermission(RecursosHumanosPermissionKeys.Delete)]

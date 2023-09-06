@@ -14,8 +14,8 @@ public class CategoriaTIColumns
     public string Emaillocal { get; set; }
     public string Extension { get; set; }
     public string Telefono { get; set; }
-    public string Nse { get; set; }
-    public string Cluster { get; set; }
-    public string Brick { get; set; }
+    //public string Nse { get; set; }
+    //public string Cluster { get; set; }
+    //public string Brick { get; set; }
     //public DateTime DtRegistro { get; set; }
 }

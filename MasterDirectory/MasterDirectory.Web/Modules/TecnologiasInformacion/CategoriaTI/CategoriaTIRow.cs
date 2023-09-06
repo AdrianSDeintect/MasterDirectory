@@ -50,28 +50,28 @@ public sealed class CategoriaTIRow : Row<CategoriaTIRow.RowFields>, IIdRow, INam
         set => fields.Telefono[this] = value;
     }
 
-    [LookupEditor(typeof(CatTILookup), FilterField = "IdtipoCatalogo", FilterValue = 63), LookupInclude]
-    [DisplayName("NSE"), Column("NSE"), Size(10)]
-    public string Nse
-    {
-        get => fields.Nse[this];
-        set => fields.Nse[this] = value;
-    }
+    //[LookupEditor(typeof(CatTILookup), FilterField = "IdtipoCatalogo", FilterValue = 63), LookupInclude]
+    //[DisplayName("NSE"), Column("NSE"), Size(10)]
+    //public string Nse
+    //{
+    //    get => fields.Nse[this];
+    //    set => fields.Nse[this] = value;
+    //}
 
-    [LookupEditor(typeof(CatTILookup), FilterField = "IdtipoCatalogo", FilterValue = 64), LookupInclude]
-    [DisplayName("Cluster"), Size(15)]
-    public string Cluster
-    {
-        get => fields.Cluster[this];
-        set => fields.Cluster[this] = value;
-    }
+    //[LookupEditor(typeof(CatTILookup), FilterField = "IdtipoCatalogo", FilterValue = 64), LookupInclude]
+    //[DisplayName("Cluster"), Size(15)]
+    //public string Cluster
+    //{
+    //    get => fields.Cluster[this];
+    //    set => fields.Cluster[this] = value;
+    //}
 
-    [DisplayName("Brick"), Size(15)]
-    public string Brick
-    {
-        get => fields.Brick[this];
-        set => fields.Brick[this] = value;
-    }
+    //[DisplayName("Brick"), Size(15)]
+    //public string Brick
+    //{
+    //    get => fields.Brick[this];
+    //    set => fields.Brick[this] = value;
+    //}
 
     //[DisplayName("Dt Registro"), Column("dtRegistro"), NotNull]
     //public DateTime? DtRegistro
@@ -87,9 +87,9 @@ public sealed class CategoriaTIRow : Row<CategoriaTIRow.RowFields>, IIdRow, INam
         public StringField Emaillocal;
         public StringField Extension;
         public StringField Telefono;
-        public StringField Nse;
-        public StringField Cluster;
-        public StringField Brick;
+        //public StringField Nse;
+        //public StringField Cluster;
+        //public StringField Brick;
         //public DateTimeField DtRegistro;
 
     }

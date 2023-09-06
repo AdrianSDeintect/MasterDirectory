@@ -1,11 +1,8 @@
-﻿import { StringEditor, LookupEditor, PrefixedContext } from "@serenity-is/corelib";
+﻿import { StringEditor, PrefixedContext } from "@serenity-is/corelib";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface CategoriaTIForm {
     LocalSap: StringEditor;
-    Nse: LookupEditor;
-    Cluster: LookupEditor;
-    Brick: StringEditor;
     UsuarioGeo: StringEditor;
     Emaillocal: StringEditor;
     Extension: StringEditor;
@@ -23,13 +20,9 @@ export class CategoriaTIForm extends PrefixedContext {
             CategoriaTIForm.init = true;
 
             var w0 = StringEditor;
-            var w1 = LookupEditor;
 
             initFormType(CategoriaTIForm, [
                 'LocalSap', w0,
-                'Nse', w1,
-                'Cluster', w1,
-                'Brick', w0,
                 'UsuarioGeo', w0,
                 'Emaillocal', w0,
                 'Extension', w0,
