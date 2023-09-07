@@ -15,6 +15,6 @@ public class CategoriaConsultoriosColumns
     public string HorarioLv { get; set; }
     public string HorarioS { get; set; }
     public string HorarioD { get; set; }
-    public string RampaDiscapa { get; set; }
+    
     //public DateTime DtRegistro { get; set; }
 }

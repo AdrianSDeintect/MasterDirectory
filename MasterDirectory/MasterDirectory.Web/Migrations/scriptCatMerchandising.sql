@@ -36,6 +36,7 @@ CREATE TABLE [dbo].[CatMerchandising](
 	[M2Calc] [varchar](250) NULL,
 	[RutaDLI] [varchar](50) NULL,
 	[TipoSucursal] [varchar](250) NULL,
+    [RampaDiscapa] [varchar](50) NULL,
 	[dtRegistro] [datetime] NOT NULL,
  CONSTRAINT [PK_CatMerchandising] PRIMARY KEY CLUSTERED 
 (

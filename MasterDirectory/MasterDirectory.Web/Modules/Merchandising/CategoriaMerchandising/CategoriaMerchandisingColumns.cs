@@ -39,6 +39,7 @@ public class CategoriaMerchandisingColumns
     public string MedidasPecheras { get; set; }
     public string MedidaCopete { get; set; }
     public string MedidasCanceleria { get; set; }
+    public string RampaDiscapa { get; set; }
 
     //public DateTime DtRegistro { get; set; }
 }

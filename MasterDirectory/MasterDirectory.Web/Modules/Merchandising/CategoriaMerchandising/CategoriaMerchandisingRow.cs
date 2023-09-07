@@ -69,7 +69,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.TamanoHeader[this] = value;
     }
 
-    [DisplayName("Checkout tipo  \"L\""), Column("Checkout"), QuickSearch, Size(250)]
+    [DisplayName("Checkout tipo  \"L\""), Column("Checkout"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 8), LookupInclude]
     public string Checkout
     {
@@ -77,7 +77,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.Checkout[this] = value;
     }
 
-    [DisplayName("Medida Cabecera"), QuickSearch, Size(250)]
+    [DisplayName("Medida Cabecera"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 9), LookupInclude]
     public string MedidaCabecera
     {
@@ -85,7 +85,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.MedidaCabecera[this] = value;
     }
 
-    [DisplayName("End Cap"), QuickSearch, Size(250)]
+    [DisplayName("End Cap"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 10), LookupInclude]
     public string EndCap
     {
@@ -93,7 +93,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.EndCap[this] = value;
     }
 
-    [DisplayName("Medida Gráfico"), Column("MedidaGrafico"), QuickSearch, Size(250)]
+    [DisplayName("Medida Gráfico"), Column("MedidaGrafico"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 11), LookupInclude]
     public string MedidaGrafico
     {
@@ -101,7 +101,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.MedidaGrafico[this] = value;
     }
 
-    [DisplayName("Bus Stop"), QuickSearch, Size(250)]
+    [DisplayName("Bus Stop"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 12), LookupInclude]
     public string BusStop
     {
@@ -109,7 +109,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.BusStop[this] = value;
     }
 
-    [DisplayName("Aretes"), QuickSearch, Size(250)]
+    [DisplayName("Aretes"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 13), LookupInclude]
     public string Aretes
     {
@@ -189,7 +189,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.PortaposterCanceleria[this] = value;
     }
 
-    [DisplayName("Medidas Pecheras"), QuickSearch, Size(250)]
+    [DisplayName("Medidas Pecheras"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 22), LookupInclude]
     public string MedidasPecheras
     {
@@ -212,7 +212,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.MedidasCanceleria[this] = value;
     }
 
-    [DisplayName("M2 Calc"), QuickSearch, Size(250)]
+    [DisplayName("M2 Calc"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 2), LookupInclude]
     public string M2Calc
     {
@@ -220,19 +220,27 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.M2Calc[this] = value;
     }
 
-    [DisplayName("Ruta Dli"), Column("RutaDLI"), Size(50)]
+    [DisplayName("Ruta Dli"), Column("RutaDLI"), Size(50), Required]
     public string RutaDli
     {
         get => fields.RutaDli[this];
         set => fields.RutaDli[this] = value;
     }
 
-    [DisplayName("Tipo Sucursal (Mercha)"), Column("TipoSucursal"), QuickSearch, Size(250)]
+    [DisplayName("Tipo Sucursal (Mercha)"), Column("TipoSucursal"), QuickSearch, Size(250), Required]
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 1), LookupInclude]
     public string TipoSucursal
     {
         get => fields.TipoSucursal[this];
         set => fields.TipoSucursal[this] = value;
+    }
+
+    [DisplayName("Rampa Discapacitados"), Column("RampaDiscapa"), QuickSearch, Size(50)]
+    [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 42), LookupInclude]
+    public string RampaDiscapa
+    {
+        get => fields.RampaDiscapa[this];
+        set => fields.RampaDiscapa[this] = value;
     }
 
     //[DisplayName("Dt Registro"), Column("dtRegistro"), NotNull]
@@ -271,6 +279,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         public StringField M2Calc;
         public StringField RutaDli;
         public StringField TipoSucursal;
+        public StringField RampaDiscapa;
         //public DateTimeField DtRegistro;
 
     }

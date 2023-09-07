@@ -12,7 +12,6 @@ public class CategoriaConsultoriosForm
     public string LocalSap { get; set; }
     public string ConsulOperacion { get; set; }
     public string Benamedic { get; set; }
-    public string RampaDiscapa { get; set; }
 
     [Tab("Horarios")]
     public string HorarioLv { get; set; }

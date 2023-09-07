@@ -16,6 +16,7 @@ public class CategoriaMerchandisingForm
     public int ScreenDisplay { get; set; }
     public int TramosLisos { get; set; }
     public int Checkout { get; set; }
+    public string RampaDiscapa { get; set; }
 
     [Tab("Medidas")]
 

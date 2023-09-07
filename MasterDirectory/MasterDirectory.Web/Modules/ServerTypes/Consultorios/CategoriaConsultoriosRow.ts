@@ -7,7 +7,6 @@ export interface CategoriaConsultoriosRow {
     HorarioLv?: string;
     HorarioS?: string;
     HorarioD?: string;
-    RampaDiscapa?: string;
 }
 
 export abstract class CategoriaConsultoriosRow {

@@ -28,6 +28,7 @@ export interface CategoriaMerchandisingRow {
     M2Calc?: string;
     RutaDli?: string;
     TipoSucursal?: string;
+    RampaDiscapa?: string;
 }
 
 export abstract class CategoriaMerchandisingRow {

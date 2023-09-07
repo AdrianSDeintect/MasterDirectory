@@ -15,7 +15,6 @@ CREATE TABLE [dbo].[CatConsultorios](
 	[HorarioLV] [varchar](50) NULL,
 	[HorarioS] [varchar](50) NULL,
 	[HorarioD] [varchar](50) NULL,
-	[RampaDiscapa] [varchar](50) NULL,
 	[dtRegistro] [datetime] NOT NULL,
  CONSTRAINT [PK_CatConsultorios] PRIMARY KEY CLUSTERED 
 (

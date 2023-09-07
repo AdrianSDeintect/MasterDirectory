@@ -59,14 +59,6 @@ public sealed class CategoriaConsultoriosRow : Row<CategoriaConsultoriosRow.RowF
         set => fields.HorarioD[this] = value;
     }
 
-    [DisplayName("Rampa Discapacitados"), Column("RampaDiscapa"), QuickSearch, Size(50)]
-    [LookupEditor(typeof(CatConsultoriosLookup), FilterField = "IdtipoCatalogo", FilterValue = 42), LookupInclude]
-    public string RampaDiscapa
-    {
-        get => fields.RampaDiscapa[this];
-        set => fields.RampaDiscapa[this] = value;
-    }
-
     //[DisplayName("Dt Registro"), Column("dtRegistro"), NotNull]
     //public DateTime? DtRegistro
     //{
@@ -82,7 +74,6 @@ public sealed class CategoriaConsultoriosRow : Row<CategoriaConsultoriosRow.RowF
         public StringField HorarioLv;
         public StringField HorarioS;
         public StringField HorarioD;
-        public StringField RampaDiscapa;
         //public DateTimeField DtRegistro;
 
     }
