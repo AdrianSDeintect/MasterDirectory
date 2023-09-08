@@ -5,6 +5,7 @@ export interface CategoriaDigitalRow {
     DirGoogle?: string;
     Latitud?: string;
     Longitud?: string;
+    LinkGoogleMaps?: string;
 }
 
 export abstract class CategoriaDigitalRow {

@@ -7,6 +7,11 @@
     <DotNetSergen>dotnet sergen</DotNetSergen>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Modules\ImportExcel\**" />
+    <Content Remove="Modules\ImportExcel\**" />
+    <EmbeddedResource Remove="Modules\ImportExcel\**" />
+    <None Remove="Modules\ImportExcel\**" />
+    <TypeScriptCompile Remove="Modules\ImportExcel\**" />
     <TypeScriptCompile Remove="node_modules\**" />
     <EmbeddedResource Include="Migrations\**\*.sql" />
     <Content Update=".eslintrc.json;libman.json;package.json;package-lock.json;sergen.json;tsconfig.json;tslint.json;Modules\tsconfig.json" CopyToOutputDirectory="Never" CopyToPublishDirectory="Never" />

@@ -42,6 +42,13 @@ public sealed class CategoriaDigitalRow : Row<CategoriaDigitalRow.RowFields>, II
         set => fields.Longitud[this] = value;
     }
 
+    [DisplayName("Link Google Maps"), Column("LinkGoogleMaps"), Size(500), UrlFormatter]
+    public string LinkGoogleMaps
+    {
+        get => fields.LinkGoogleMaps[this];
+        set => fields.LinkGoogleMaps[this] = value;
+    }
+
     //[DisplayName("Dt Registro"), Column("dtRegistro"), NotNull]
     //public DateTime? DtRegistro
     //{
@@ -55,6 +62,7 @@ public sealed class CategoriaDigitalRow : Row<CategoriaDigitalRow.RowFields>, II
         public StringField DirGoogle;
         public StringField Latitud;
         public StringField Longitud;
+        public StringField LinkGoogleMaps;
         //public DateTimeField DtRegistro;
 
     }

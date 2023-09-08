@@ -6,6 +6,7 @@ export interface CategoriaDigitalForm {
     DirGoogle: StringEditor;
     Latitud: StringEditor;
     Longitud: StringEditor;
+    LinkGoogleMaps: StringEditor;
 }
 
 export class CategoriaDigitalForm extends PrefixedContext {
@@ -24,7 +25,8 @@ export class CategoriaDigitalForm extends PrefixedContext {
                 'LocalSap', w0,
                 'DirGoogle', w0,
                 'Latitud', w0,
-                'Longitud', w0
+                'Longitud', w0,
+                'LinkGoogleMaps', w0
             ]);
         }
     }

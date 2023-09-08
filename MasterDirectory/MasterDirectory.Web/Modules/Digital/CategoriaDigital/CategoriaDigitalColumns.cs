@@ -13,5 +13,6 @@ public class CategoriaDigitalColumns
     public string DirGoogle { get; set; }
     public string Latitud { get; set; }
     public string Longitud { get; set; }
+    public string LinkGoogleMaps { get; set; }
     //public DateTime DtRegistro { get; set; }
 }
