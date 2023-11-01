@@ -2,7 +2,6 @@
 
 export interface CategoriaExpansionRow {
     LocalSap?: string;
-    TipoFarmacia?: string;
     LocationType?: string;
     Reapertura?: string;
     Comsuc?: string;
@@ -21,6 +20,8 @@ export interface CategoriaExpansionRow {
     ProvMobiliario?: string;
     ColorMob?: string;
     Dermo?: string;
+    Farmacia?: string;
+    FechaApertura?: string;
 }
 
 export abstract class CategoriaExpansionRow {

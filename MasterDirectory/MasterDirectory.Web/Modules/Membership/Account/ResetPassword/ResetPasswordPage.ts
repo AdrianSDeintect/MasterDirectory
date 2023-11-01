@@ -52,7 +52,7 @@ export class ResetPasswordPanel extends PropertyPanel<ResetPasswordRequest, any>
 
     getTemplate() {
         return `<h2 class="text-center p-4">
-    <img src="${resolveUrl("~/Content/site/images/logo_FMB.png")}"
+    <img src="${resolveUrl("~/Content/site/images/DM_Admin.png")}"
         class="rounded-circle p-1" style="background-color: var(--s-sidebar-band-bg)"
         width="50" height="50" /> MasterDirectory
 </h2>

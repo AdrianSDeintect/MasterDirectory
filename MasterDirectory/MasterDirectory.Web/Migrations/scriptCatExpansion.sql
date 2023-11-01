@@ -10,9 +10,8 @@ GO
 
 CREATE TABLE [dbo].[CatExpansion](
 	[LocalSap] [varchar](5) NOT NULL,
-	[TipoFarmacia] [varchar](50) NULL,
 	[LocationType] [varchar](50) NULL,
-	[Reapertura] [varchar](25) NULL,
+	[Reapertura] [datetime] NULL,
 	[Comsuc] [varchar](50) NULL,
 	[TipoEstaciona] [varchar](100) NULL,
 	[NCajonesEstaciona] [varchar](10) NULL,
@@ -29,7 +28,9 @@ CREATE TABLE [dbo].[CatExpansion](
 	[ProvMobiliario] [varchar](50) NULL,
 	[ColorMob] [varchar](60) NULL,
 	[Dermo] [varchar](25) NULL,
-	[dtRegistro] [datetime] NOT NULL,
+    [Farmacia] [varchar] (70) NULL,
+    [FechaApertura] [datetime] NULL,
+    [dtRegistro] [datetime] NOT NULL,
  CONSTRAINT [PK_CatExpansion] PRIMARY KEY CLUSTERED 
 (
 	[LocalSap] ASC

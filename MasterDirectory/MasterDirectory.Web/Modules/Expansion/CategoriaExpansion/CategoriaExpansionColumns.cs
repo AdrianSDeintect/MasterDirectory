@@ -10,9 +10,11 @@ public class CategoriaExpansionColumns
 {
     [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
     public string LocalSap { get; set; }
-    public string TipoFarmacia { get; set; }
+    //public string TipoFarmacia { get; set; }
+    public string Farmacia { get; set; }
+    public DateTime FechaApertura { get; set; }
     public string LocationType { get; set; }
-    public string Reapertura { get; set; }
+    public DateTime? Reapertura { get; set; }
     public string Comsuc { get; set; }
     public string TipoEstaciona { get; set; }
     public string NCajonesEstaciona { get; set; }

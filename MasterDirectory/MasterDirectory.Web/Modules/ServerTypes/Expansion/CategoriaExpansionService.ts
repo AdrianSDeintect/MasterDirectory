@@ -1,5 +1,6 @@
 ﻿import { SaveRequest, SaveResponse, ServiceOptions, DeleteRequest, DeleteResponse, RetrieveRequest, RetrieveResponse, ListRequest, ListResponse, serviceRequest } from "@serenity-is/corelib/q";
 import { CategoriaExpansionRow } from "./CategoriaExpansionRow";
+import { ExcelImportRequest, ExcelImportResponse } from "@serenity-is/extensions";
 
 export namespace CategoriaExpansionService {
     export const baseUrl = 'Expansion/CategoriaExpansion';
@@ -9,13 +10,15 @@ export namespace CategoriaExpansionService {
     export declare function Delete(request: DeleteRequest, onSuccess?: (response: DeleteResponse) => void, opt?: ServiceOptions<any>): JQueryXHR;
     export declare function Retrieve(request: RetrieveRequest, onSuccess?: (response: RetrieveResponse<CategoriaExpansionRow>) => void, opt?: ServiceOptions<any>): JQueryXHR;
     export declare function List(request: ListRequest, onSuccess?: (response: ListResponse<CategoriaExpansionRow>) => void, opt?: ServiceOptions<any>): JQueryXHR;
+    export declare function ExcelImport(request: ExcelImportRequest, onSuccess?: (response: ExcelImportResponse) => void, opt?: ServiceOptions<any>): JQueryXHR;
 
     export const Methods = {
         Create: "Expansion/CategoriaExpansion/Create",
         Update: "Expansion/CategoriaExpansion/Update",
         Delete: "Expansion/CategoriaExpansion/Delete",
         Retrieve: "Expansion/CategoriaExpansion/Retrieve",
-        List: "Expansion/CategoriaExpansion/List"
+        List: "Expansion/CategoriaExpansion/List",
+        ExcelImport: "Expansion/CategoriaExpansion/ExcelImport"
     } as const;
 
     [
@@ -23,7 +26,8 @@ export namespace CategoriaExpansionService {
         'Update', 
         'Delete', 
         'Retrieve', 
-        'List'
+        'List', 
+        'ExcelImport'
     ].forEach(x => {
         (<any>CategoriaExpansionService)[x] = function (r, s, o) {
             return serviceRequest(baseUrl + '/' + x, r, s, o);

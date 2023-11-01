@@ -1,11 +1,12 @@
-﻿import { StringEditor, LookupEditor, PrefixedContext } from "@serenity-is/corelib";
+﻿import { StringEditor, LookupEditor, DateEditor, PrefixedContext } from "@serenity-is/corelib";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface CategoriaExpansionForm {
     LocalSap: StringEditor;
-    TipoFarmacia: LookupEditor;
     LocationType: LookupEditor;
-    Reapertura: StringEditor;
+    Farmacia: StringEditor;
+    FechaApertura: DateEditor;
+    Reapertura: DateEditor;
     Comsuc: StringEditor;
     TipoEstaciona: LookupEditor;
     NCajonesEstaciona: StringEditor;
@@ -36,12 +37,14 @@ export class CategoriaExpansionForm extends PrefixedContext {
 
             var w0 = StringEditor;
             var w1 = LookupEditor;
+            var w2 = DateEditor;
 
             initFormType(CategoriaExpansionForm, [
                 'LocalSap', w0,
-                'TipoFarmacia', w1,
                 'LocationType', w1,
-                'Reapertura', w0,
+                'Farmacia', w0,
+                'FechaApertura', w2,
+                'Reapertura', w2,
                 'Comsuc', w0,
                 'TipoEstaciona', w1,
                 'NCajonesEstaciona', w0,

@@ -243,6 +243,15 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         set => fields.RampaDiscapa[this] = value;
     }
 
+    [DisplayName("Clasificación Nacional"), Column("ClasificacionNacional"), QuickSearch, Size(50)]
+    [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 76), LookupInclude]
+    public string ClasificacionNacional
+    {
+        get => fields.ClasificacionNacional[this];
+        set => fields.ClasificacionNacional[this] = value;
+    }
+
+
     //[DisplayName("Dt Registro"), Column("dtRegistro"), NotNull]
     //public DateTime? DtRegistro
     //{
@@ -280,6 +289,7 @@ public sealed class CategoriaMerchandisingRow : Row<CategoriaMerchandisingRow.Ro
         public StringField RutaDli;
         public StringField TipoSucursal;
         public StringField RampaDiscapa;
+        public StringField ClasificacionNacional;
         //public DateTimeField DtRegistro;
 
     }

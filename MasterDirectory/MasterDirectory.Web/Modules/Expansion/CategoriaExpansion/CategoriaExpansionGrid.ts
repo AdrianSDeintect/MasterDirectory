@@ -2,6 +2,7 @@ import { Decorators, EntityGrid, ToolButton } from '@serenity-is/corelib';
 import { CategoriaExpansionColumns, CategoriaExpansionRow, CategoriaExpansionService } from '../../ServerTypes/Expansion';
 import { CategoriaExpansionDialog } from './CategoriaExpansionDialog';
 import { ExcelExportHelper, PdfExportHelper, ReportHelper } from "@serenity-is/extensions";
+import { ImportExcelDialog } from '../../ImportExcel/ImportExcelDialog';
 
 @Decorators.registerClass('MasterDirectory.Expansion.CategoriaExpansionGrid')
 export class CategoriaExpansionGrid extends EntityGrid<CategoriaExpansionRow, any> {
@@ -21,7 +22,7 @@ export class CategoriaExpansionGrid extends EntityGrid<CategoriaExpansionRow, an
             grid: this,
             service: CategoriaExpansionService.baseUrl + '/ListExcel',
             onViewSubmit: () => this.onViewSubmit(),
-            title: "Exportar Excel",
+            title: "Exportar",
             separator: true
         }));
 
@@ -30,6 +31,22 @@ export class CategoriaExpansionGrid extends EntityGrid<CategoriaExpansionRow, an
             title: "Exportar PDF",
             onViewSubmit: () => this.onViewSubmit()
         }));
+
+        buttons.push({
+            title: 'Importar Excel',
+            cssClass: 'export-xlsx-button',
+            onClick: () => {
+                // open import dialog, let it handle rest
+                var dialog = new ImportExcelDialog({
+                });
+                dialog.element.on('dialogclose', () => {
+                    this.refresh();
+                    dialog = null;
+                });
+                dialog.Categoria = 'Expansion'
+                dialog.dialogOpen();
+            }
+        });
 
         return buttons;
     }

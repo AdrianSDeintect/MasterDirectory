@@ -29,6 +29,7 @@ export interface CategoriaMerchandisingRow {
     RutaDli?: string;
     TipoSucursal?: string;
     RampaDiscapa?: string;
+    ClasificacionNacional?: string;
 }
 
 export abstract class CategoriaMerchandisingRow {

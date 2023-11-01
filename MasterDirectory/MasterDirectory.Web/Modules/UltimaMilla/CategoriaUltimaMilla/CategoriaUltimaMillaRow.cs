@@ -21,97 +21,291 @@ public sealed class CategoriaUltimaMillaRow : Row<CategoriaUltimaMillaRow.RowFie
         get => fields.LocalSap[this];
         set => fields.LocalSap[this] = value;
     }
-    [DisplayName("Venta Telefónica"), Column("VentaTelefonica"), QuickSearch, Size(10)]
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 31), LookupInclude]
-    public string VentaTelefonica
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 65), LookupInclude]
+    [DisplayName("Estado"), Size(50)]
+    public string Estado
     {
-        get => fields.VentaTelefonica[this];
-        set => fields.VentaTelefonica[this] = value;
+        get => fields.Estado[this];
+        set => fields.Estado[this] = value;
     }
 
-    [DisplayName("Garantizado"), QuickSearch, Size(10)]
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 32), LookupInclude]
-    public string Garantizado
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 66), LookupInclude]
+    [DisplayName("Proveedor - 99Min"), Column("Prov99Min"), Size(10)]
+    public string Prov99Min
     {
-        get => fields.Garantizado[this];
-        set => fields.Garantizado[this] = value;
+        get => fields.Prov99Min[this];
+        set => fields.Prov99Min[this] = value;
     }
 
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 33), LookupInclude]
-    [DisplayName("HUB"), Column("HUB"), QuickSearch, Size(50)]
-    public string Hub
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 66), LookupInclude]
+    [DisplayName("Proveedor - MU"), Column("ProvMU"), Size(10)]
+    public string ProvMu
     {
-        get => fields.Hub[this];
-        set => fields.Hub[this] = value;
+        get => fields.ProvMu[this];
+        set => fields.ProvMu[this] = value;
     }
 
-    [DisplayName("E-Commerce"), Column("ECommerce"), Size(50)]
-    public string ECommerce
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 66), LookupInclude]
+    [DisplayName("Proveedor - CID"), Column("ProvCID"), Size(10)]
+    public string ProvCid
     {
-        get => fields.ECommerce[this];
-        set => fields.ECommerce[this] = value;
+        get => fields.ProvCid[this];
+        set => fields.ProvCid[this] = value;
     }
 
-    [DisplayName("Tipo E-Comm"), Column("TipoEComm"), QuickSearch, Size(50)]
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 34), LookupInclude]
-    public string TipoEComm
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 66), LookupInclude]
+    [DisplayName("Proveedor - Rappi Cargo"), Column("ProvRappiCargo"), Size(10)]
+    public string ProvRappiCargo
     {
-        get => fields.TipoEComm[this];
-        set => fields.TipoEComm[this] = value;
+        get => fields.ProvRappiCargo[this];
+        set => fields.ProvRappiCargo[this] = value;
     }
 
-    [DisplayName("Rappi"), Column("RAPPI"), QuickSearch, Size(50)]
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 35), LookupInclude]
-    public string Rappi
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 67), LookupInclude]
+    [DisplayName("Venta Telefónica - 99Min"), Column("VentaTelf99Min"), Size(10)]
+    public string VentaTelf99Min
     {
-        get => fields.Rappi[this];
-        set => fields.Rappi[this] = value;
+        get => fields.VentaTelf99Min[this];
+        set => fields.VentaTelf99Min[this] = value;
     }
 
-    [DisplayName("Tablet"), Column("TABLET"), QuickSearch, Size(50)]
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 36), LookupInclude]
-    public string Tablet
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 67), LookupInclude]
+    [DisplayName("Venta Telefónica - MU"), Column("VentaTelfMU"), Size(10)]
+    public string VentaTelfMu
     {
-        get => fields.Tablet[this];
-        set => fields.Tablet[this] = value;
+        get => fields.VentaTelfMu[this];
+        set => fields.VentaTelfMu[this] = value;
     }
 
-    [DisplayName("N° Serie"),  Column("NSerie"), Size(50)]
-    public string NSerie
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 67), LookupInclude]
+    [DisplayName("Venta Telefónica - CID"), Column("VentaTelfCID"), Size(10)]
+    public string VentaTelfCid
     {
-        get => fields.NSerie[this];
-        set => fields.NSerie[this] = value;
+        get => fields.VentaTelfCid[this];
+        set => fields.VentaTelfCid[this] = value;
     }
 
-    [DisplayName("Estatus Tablet"), Column("EstatusTablet"), QuickSearch, Size(50)]
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 37), LookupInclude]
-    public string EstatusTablet
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 67), LookupInclude]
+    [DisplayName("Venta Telefónica - Rappi Cargo"), Column("VentaTelfRappiCargo"), Size(10)]
+    public string VentaTelfRappiCargo
     {
-        get => fields.EstatusTablet[this];
-        set => fields.EstatusTablet[this] = value;
+        get => fields.VentaTelfRappiCargo[this];
+        set => fields.VentaTelfRappiCargo[this] = value;
     }
 
-    [DisplayName("QR"), Column("QR"), Size(50)]
-    public string Qr
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 68), LookupInclude]
+    [DisplayName("Garantizado - 99Min"), Column("Garantizado99Min"), Size(10)]
+    public string Garantizado99Min
     {
-        get => fields.Qr[this];
-        set => fields.Qr[this] = value;
+        get => fields.Garantizado99Min[this];
+        set => fields.Garantizado99Min[this] = value;
     }
 
-    [DisplayName("Servicio a Domicilio (OPE)"), Column("ServicioDomicilio"), QuickSearch , Size(50)]
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 38), LookupInclude]
-    public string ServicioDomicilio
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 68), LookupInclude]
+    [DisplayName("Garantizado - MU"), Column("GarantizadoMU"), Size(10)]
+    public string GarantizadoMu
     {
-        get => fields.ServicioDomicilio[this];
-        set => fields.ServicioDomicilio[this] = value;
+        get => fields.GarantizadoMu[this];
+        set => fields.GarantizadoMu[this] = value;
     }
 
-    [DisplayName("Prueba UBER"), Column("PruebaUBER"), QuickSearch, Size(50)]
-    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 39), LookupInclude]
-    public string PruebaUber
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 68), LookupInclude]
+    [DisplayName("Garantizado - CID"), Column("GarantizadoCID"), Size(10)]
+    public string GarantizadoCid
     {
-        get => fields.PruebaUber[this];
-        set => fields.PruebaUber[this] = value;
+        get => fields.GarantizadoCid[this];
+        set => fields.GarantizadoCid[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 69), LookupInclude]
+    [DisplayName("e-Commerce Delivery"), Column("eCommerceDelivery"), Size(10)]
+    public string ECommerceDelivery
+    {
+        get => fields.ECommerceDelivery[this];
+        set => fields.ECommerceDelivery[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 69), LookupInclude]
+    [DisplayName("e-Commerce Click&Collect"), Column("eCommerceClickCollect"), Size(10)]
+    public string ECommerceClickCollect
+    {
+        get => fields.ECommerceClickCollect[this];
+        set => fields.ECommerceClickCollect[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 75), LookupInclude]
+    [DisplayName("e-Commerce Tipo"), Column("eCommerceTipo"), Size(50)]
+    public string ECommerceTipo
+    {
+        get => fields.ECommerceTipo[this];
+        set => fields.ECommerceTipo[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 70), LookupInclude]
+    [DisplayName("Fijo - 99Min"), Column("Fijo99Min"), Size(10)]
+    public string Fijo99Min
+    {
+        get => fields.Fijo99Min[this];
+        set => fields.Fijo99Min[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 70), LookupInclude]
+    [DisplayName("Fijo - MU"), Column("FijoMU"), Size(10)]
+    public string FijoMu
+    {
+        get => fields.FijoMu[this];
+        set => fields.FijoMu[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 70), LookupInclude]
+    [DisplayName("Fijo - CID"), Column("FijoCID"), Size(10)]
+    public string FijoCid
+    {
+        get => fields.FijoCid[this];
+        set => fields.FijoCid[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 71), LookupInclude]
+    [DisplayName("On Demand - MU"), Column("OnDemandMU"), Size(10)]
+    public string OnDemandMu
+    {
+        get => fields.OnDemandMu[this];
+        set => fields.OnDemandMu[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 71), LookupInclude]
+    [DisplayName("On Demand - Rappi Cargo"), Column("OnDemandRappiCargo"), Size(10)]
+    public string OnDemandRappiCargo
+    {
+        get => fields.OnDemandRappiCargo[this];
+        set => fields.OnDemandRappiCargo[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 72), LookupInclude]
+    [DisplayName("Canales Digitales - Rappi"), Column("CanalesDigitalesRappi"), Size(10)]
+    public string CanalesDigitalesRappi
+    {
+        get => fields.CanalesDigitalesRappi[this];
+        set => fields.CanalesDigitalesRappi[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 72), LookupInclude]
+    [DisplayName("Canales Digitales - Uber"), Column("CanalesDigitalesUber"), Size(10)]
+    public string CanalesDigitalesUber
+    {
+        get => fields.CanalesDigitalesUber[this];
+        set => fields.CanalesDigitalesUber[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 73), LookupInclude]
+    [DisplayName("Servicio Efectivo - 1"), Column("ServicioEfectivo1"), Size(10)]
+    public string ServicioEfectivo1
+    {
+        get => fields.ServicioEfectivo1[this];
+        set => fields.ServicioEfectivo1[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 73), LookupInclude]
+    [DisplayName("Servicio Efectivo - 2"), Column("ServicioEfectivo2"), Size(10)]
+    public string ServicioEfectivo2
+    {
+        get => fields.ServicioEfectivo2[this];
+        set => fields.ServicioEfectivo2[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 73), LookupInclude]
+    [DisplayName("Servicio Efectivo - 3"), Column("ServicioEfectivo3"), Size(10)]
+    public string ServicioEfectivo3
+    {
+        get => fields.ServicioEfectivo3[this];
+        set => fields.ServicioEfectivo3[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 73), LookupInclude]
+    [DisplayName("Servicio Efectivo - 4"), Column("ServicioEfectivo4"), Size(10)]
+    public string ServicioEfectivo4
+    {
+        get => fields.ServicioEfectivo4[this];
+        set => fields.ServicioEfectivo4[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 73), LookupInclude]
+    [DisplayName("Servicio Efectivo - 5"), Column("ServicioEfectivo5"), Size(10)]
+    public string ServicioEfectivo5
+    {
+        get => fields.ServicioEfectivo5[this];
+        set => fields.ServicioEfectivo5[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 73), LookupInclude]
+    [DisplayName("Servicio Efectivo - 6"), Column("ServicioEfectivo6"), Size(10)]
+    public string ServicioEfectivo6
+    {
+        get => fields.ServicioEfectivo6[this];
+        set => fields.ServicioEfectivo6[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 73), LookupInclude]
+    [DisplayName("Servicio Efectivo - 7"), Column("ServicioEfectivo7"), Size(10)]
+    public string ServicioEfectivo7
+    {
+        get => fields.ServicioEfectivo7[this];
+        set => fields.ServicioEfectivo7[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 73), LookupInclude]
+    [DisplayName("Servicio Efectivo - 8"), Column("ServicioEfectivo8"), Size(10)]
+    public string ServicioEfectivo8
+    {
+        get => fields.ServicioEfectivo8[this];
+        set => fields.ServicioEfectivo8[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 74), LookupInclude]
+    [DisplayName("Servicio Tarjeta - 9"), Column("ServicioTarjeta9"), Size(10)]
+    public string ServicioTarjeta9
+    {
+        get => fields.ServicioTarjeta9[this];
+        set => fields.ServicioTarjeta9[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 74), LookupInclude]
+    [DisplayName("Servicio Tarjeta - 10"), Column("ServicioTarjeta10"), Size(10)]
+    public string ServicioTarjeta10
+    {
+        get => fields.ServicioTarjeta10[this];
+        set => fields.ServicioTarjeta10[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 74), LookupInclude]
+    [DisplayName("Servicio Tarjeta - 11"), Column("ServicioTarjeta11"), Size(10)]
+    public string ServicioTarjeta11
+    {
+        get => fields.ServicioTarjeta11[this];
+        set => fields.ServicioTarjeta11[this] = value;
+    }
+
+    [LookupEditor(typeof(CatUltimaMillaLookup), FilterField = "IdtipoCatalogo", FilterValue = 74), LookupInclude]
+    [DisplayName("Servicio Tarjeta - 12"), Column("ServicioTarjeta12"), Size(10)]
+    public string ServicioTarjeta12
+    {
+        get => fields.ServicioTarjeta12[this];
+        set => fields.ServicioTarjeta12[this] = value;
+    }
+
+    [DisplayName("Inicio de Servicio"), Column("InicioServicio")]
+    public string InicioServicio
+    {
+        get => fields.InicioServicio[this];
+        set => fields.InicioServicio[this] = value;
+    }
+
+    [DisplayName("Cierre de Servicio") , Column("CierreServicio")]
+    public string CierreServicio
+    {
+        get => fields.CierreServicio[this];
+        set => fields.CierreServicio[this] = value;
     }
 
     //[DisplayName("Dt Registro"), Column("dtRegistro"), NotNull]
@@ -124,18 +318,42 @@ public sealed class CategoriaUltimaMillaRow : Row<CategoriaUltimaMillaRow.RowFie
     public class RowFields : RowFieldsBase
     {
         public StringField LocalSap;
-        public StringField VentaTelefonica;
-        public StringField Garantizado;
-        public StringField Hub;
-        public StringField ECommerce;
-        public StringField TipoEComm;
-        public StringField Rappi;
-        public StringField Tablet;
-        public StringField NSerie;
-        public StringField EstatusTablet;
-        public StringField Qr;
-        public StringField ServicioDomicilio;
-        public StringField PruebaUber;
+        public StringField Estado;
+        public StringField Prov99Min;
+        public StringField ProvMu;
+        public StringField ProvCid;
+        public StringField ProvRappiCargo;
+        public StringField VentaTelf99Min;
+        public StringField VentaTelfMu;
+        public StringField VentaTelfCid;
+        public StringField VentaTelfRappiCargo;
+        public StringField Garantizado99Min;
+        public StringField GarantizadoMu;
+        public StringField GarantizadoCid;
+        public StringField ECommerceDelivery;
+        public StringField ECommerceClickCollect;
+        public StringField ECommerceTipo;
+        public StringField Fijo99Min;
+        public StringField FijoMu;
+        public StringField FijoCid;
+        public StringField OnDemandMu;
+        public StringField OnDemandRappiCargo;
+        public StringField CanalesDigitalesRappi;
+        public StringField CanalesDigitalesUber;
+        public StringField ServicioEfectivo1;
+        public StringField ServicioEfectivo2;
+        public StringField ServicioEfectivo3;
+        public StringField ServicioEfectivo4;
+        public StringField ServicioEfectivo5;
+        public StringField ServicioEfectivo6;
+        public StringField ServicioEfectivo7;
+        public StringField ServicioEfectivo8;
+        public StringField ServicioTarjeta9;
+        public StringField ServicioTarjeta10;
+        public StringField ServicioTarjeta11;
+        public StringField ServicioTarjeta12;
+        public StringField InicioServicio;
+        public StringField CierreServicio;
         //public DateTimeField DtRegistro;
 
     }

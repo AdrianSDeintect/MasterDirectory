@@ -1,8 +1,7 @@
 import { Decorators, EntityDialog } from '@serenity-is/corelib';
 import { CategoriaUltimaMillaForm, CategoriaUltimaMillaRow, CategoriaUltimaMillaService } from '../../ServerTypes/UltimaMilla';
-
-@Decorators.registerClass('MasterDirectory.UltimaMilla.CategoriaUltimaMillaDialog')
 @Decorators.panel()
+@Decorators.registerClass('MasterDirectory.UltimaMilla.CategoriaUltimaMillaDialog')
 export class CategoriaUltimaMillaDialog extends EntityDialog<CategoriaUltimaMillaRow, any> {
 
     public dialogOpen(asPanel?: boolean): void {

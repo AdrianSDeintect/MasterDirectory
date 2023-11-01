@@ -22,13 +22,27 @@ public sealed class CategoriaExpansionRow : Row<CategoriaExpansionRow.RowFields>
         set => fields.LocalSap[this] = value;
     }
 
-    [DisplayName("Tipo Farmacia"), Size(50)]
-    [LookupEditor(typeof(CatExpansionLookup), FilterField = "IdtipoCatalogo", FilterValue = 43), LookupInclude]
-    public string TipoFarmacia
+    [Column("Farmacia"), DisplayName("Farmacia"), Size(70)]
+    public string Farmacia
     {
-        get => fields.TipoFarmacia[this];
-        set => fields.TipoFarmacia[this] = value;
+        get => fields.Farmacia[this];
+        set => fields.Farmacia[this] = value;
     }
+
+    [Column("FechaApertura"), DisplayName("Fecha Apertura")]
+    public DateTime? FechaApertura
+    {
+        get => fields.FechaApertura[this];
+        set => fields.FechaApertura[this] = value;
+    }
+
+    //[DisplayName("Tipo Farmacia"), Size(50)]
+    //[LookupEditor(typeof(CatExpansionLookup), FilterField = "IdtipoCatalogo", FilterValue = 43), LookupInclude]
+    //public string TipoFarmacia
+    //{
+    //    get => fields.TipoFarmacia[this];
+    //    set => fields.TipoFarmacia[this] = value;
+    //}
 
     [DisplayName("Location Type"), Size(50)]
     [LookupEditor(typeof(CatExpansionLookup), FilterField = "IdtipoCatalogo", FilterValue = 44), LookupInclude]
@@ -38,8 +52,8 @@ public sealed class CategoriaExpansionRow : Row<CategoriaExpansionRow.RowFields>
         set => fields.LocationType[this] = value;
     }
 
-    [DisplayName("Reapertura"), Size(25)]
-    public string Reapertura
+    [DisplayName("Reapertura")]
+    public DateTime? Reapertura
     {
         get => fields.Reapertura[this];
         set => fields.Reapertura[this] = value;
@@ -170,9 +184,9 @@ public sealed class CategoriaExpansionRow : Row<CategoriaExpansionRow.RowFields>
     public class RowFields : RowFieldsBase
     {
         public StringField LocalSap;
-        public StringField TipoFarmacia;
+        //public StringField TipoFarmacia;
         public StringField LocationType;
-        public StringField Reapertura;
+        public DateTimeField? Reapertura;
         public StringField Comsuc;
         public StringField TipoEstaciona;
         public StringField NCajonesEstaciona;
@@ -189,6 +203,8 @@ public sealed class CategoriaExpansionRow : Row<CategoriaExpansionRow.RowFields>
         public StringField ProvMobiliario;
         public StringField ColorMob;
         public StringField Dermo;
+        public StringField Farmacia;
+        public DateTimeField FechaApertura;
         //public DateTimeField DtRegistro;
 
     }

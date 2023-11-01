@@ -79,3 +79,8 @@
 .s-PermissionCheckEditor .effective-permission.deny {
   background-image: url(../serenity/images/slash.png);
 }
+
+.s-CategoriaTesoreriaGrid .apertura .col-unit-price {
+  background-color: darkorchid;
+  color: #fff;
+}

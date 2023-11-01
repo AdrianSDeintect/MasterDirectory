@@ -31,7 +31,7 @@ public sealed class CatalogosOperacionesRow : Row<CatalogosOperacionesRow.RowFie
         set => fields.IdtipoCatalogo[this] = value;
     }
 
-    [DisplayName("Id Clave"), Column("idClave"), NotNull, CheckboxFormatter, AlignCenter]
+    [DisplayName("Id Clave"), Column("idClave"), NotNull, AlignCenter]
     public int? IdClave
     {
         get => fields.IdClave[this];

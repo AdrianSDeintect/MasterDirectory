@@ -17,6 +17,7 @@ public class CategoriaMerchandisingForm
     public int TramosLisos { get; set; }
     public int Checkout { get; set; }
     public string RampaDiscapa { get; set; }
+    public string ClasificacionNacional { get; set; }
 
     [Tab("Medidas")]
 

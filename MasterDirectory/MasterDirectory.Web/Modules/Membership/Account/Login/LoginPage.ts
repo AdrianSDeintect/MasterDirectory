@@ -75,9 +75,8 @@ class LoginPanel extends PropertyPanel<LoginRequest, any> {
     protected getTemplate() {
         return `
 <h2 class="text-center p-4">
-    <img src="${resolveUrl("~/Content/site/images/logo_FMB.png")}"
-        class="rounded-circle p-1" style="background-color: var(--s-sidebar-band-bg)"
-        width="90" height="90" /> Directorio Maestro
+    <img src="${resolveUrl("~/Content/site/images/DM_Admin.png")}"
+        class="p-1" style="width: -webkit-fill-available; height: -webkit-fill-available /> 
 </h2>
 
 <div class="s-Panel p-4">

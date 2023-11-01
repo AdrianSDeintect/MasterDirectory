@@ -1,9 +1,8 @@
-import{e as r}from"../../../../_chunks/chunk-DZEAZ5MW.js";import{a as t}from"../../../../_chunks/chunk-3DGPT7N5.js";import{a,c as n,f as u,g as c}from"../../../../_chunks/chunk-FEDAVPE7.js";var m=n(c(),1),i=n(u(),1);$(function(){new e($("#SignUpPanel"))});var e=class extends m.PropertyPanel{constructor(l){super(l);this.form=new r(this.idPrefix),this.form.ConfirmEmail.addValidationRule(this.uniqueName,o=>{if(this.form.ConfirmEmail.value!==this.form.Email.value)return t.Validation.EmailConfirm}),this.form.ConfirmPassword.addValidationRule(this.uniqueName,o=>{if(this.form.ConfirmPassword.value!==this.form.Password.value)return(0,i.localText)("Validation.PasswordConfirm")}),this.byId("SubmitButton").click(o=>{o.preventDefault(),this.validateForm()&&(0,i.serviceCall)({url:(0,i.resolveUrl)("~/Account/SignUp"),request:{DisplayName:this.form.DisplayName.value,Email:this.form.Email.value,Password:this.form.Password.value},onSuccess:s=>{if(s.DemoActivationLink){(0,i.information)(`You would normally receive an e-mail with instructions to active your account now.
+import{e as r}from"../../../../_chunks/chunk-DZEAZ5MW.js";import{a as t}from"../../../../_chunks/chunk-76FW2MMC.js";import{a as s,c as n,f as u,g as c}from"../../../../_chunks/chunk-FEDAVPE7.js";var m=n(c(),1),i=n(u(),1);$(function(){new e($("#SignUpPanel"))});var e=class extends m.PropertyPanel{constructor(l){super(l);this.form=new r(this.idPrefix),this.form.ConfirmEmail.addValidationRule(this.uniqueName,o=>{if(this.form.ConfirmEmail.value!==this.form.Email.value)return t.Validation.EmailConfirm}),this.form.ConfirmPassword.addValidationRule(this.uniqueName,o=>{if(this.form.ConfirmPassword.value!==this.form.Password.value)return(0,i.localText)("Validation.PasswordConfirm")}),this.byId("SubmitButton").click(o=>{o.preventDefault(),this.validateForm()&&(0,i.serviceCall)({url:(0,i.resolveUrl)("~/Account/SignUp"),request:{DisplayName:this.form.DisplayName.value,Email:this.form.Email.value,Password:this.form.Password.value},onSuccess:a=>{if(a.DemoActivationLink){(0,i.information)(`You would normally receive an e-mail with instructions to active your account now.
 
-But as this is a DEMO, you'll be redirected to the activation page automatically. `,()=>{window.location.href=(0,i.resolveUrl)(s.DemoActivationLink)});return}(0,i.information)(t.Forms.Membership.SignUp.Success,()=>{window.location.href=(0,i.resolveUrl)("~/")})}})})}getFormKey(){return r.formKey}getTemplate(){return`<h2 class="text-center p-4">
-        <img src="${(0,i.resolveUrl)("~/Content/site/images/logo_FMB.png")}"
-            class="rounded-circle p-1" style="background-color: var(--s-sidebar-band-bg)"
-            width="90" height="90" /> Directorio Maestro
+But as this is a DEMO, you'll be redirected to the activation page automatically. `,()=>{window.location.href=(0,i.resolveUrl)(a.DemoActivationLink)});return}(0,i.information)(t.Forms.Membership.SignUp.Success,()=>{window.location.href=(0,i.resolveUrl)("~/")})}})})}getFormKey(){return r.formKey}getTemplate(){return`<h2 class="text-center p-4">
+        <img src="${(0,i.resolveUrl)("~/Content/site/images/DM_Admin.png")}"
+            class="p-1" style="width: -webkit-fill-available; height: -webkit-fill-available />
     </h2>
 
     <div class="s-Panel p-4">
@@ -19,5 +18,5 @@ But as this is a DEMO, you'll be redirected to the activation page automatically
                 </button>
             </div>
         </form>
-    </div>`}};a(e,"SignUpPanel");
+    </div>`}};s(e,"SignUpPanel");
 //# sourceMappingURL=SignUpPage.js.map

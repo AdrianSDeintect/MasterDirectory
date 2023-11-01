@@ -2,6 +2,7 @@ import { Decorators, EntityGrid, ToolButton } from '@serenity-is/corelib';
 import { CategoriaDigitalColumns, CategoriaDigitalRow, CategoriaDigitalService } from '../../ServerTypes/Digital';
 import { CategoriaDigitalDialog } from './CategoriaDigitalDialog';
 import { ExcelExportHelper, PdfExportHelper, ReportHelper } from "@serenity-is/extensions";
+import { ImportExcelDialog } from '../../ImportExcel/ImportExcelDialog';
 
 @Decorators.registerClass('MasterDirectory.Digital.CategoriaDigitalGrid')
 export class CategoriaDigitalGrid extends EntityGrid<CategoriaDigitalRow, any> {
@@ -30,6 +31,22 @@ export class CategoriaDigitalGrid extends EntityGrid<CategoriaDigitalRow, any> {
             title: "Exportar PDF",
             onViewSubmit: () => this.onViewSubmit()
         }));
+
+        buttons.push({
+            title: 'Importar Excel',
+            cssClass: 'export-xlsx-button',
+            onClick: () => {
+                // open import dialog, let it handle rest
+                var dialog = new ImportExcelDialog({
+                });
+                dialog.element.on('dialogclose', () => {
+                    this.refresh();
+                    dialog = null;
+                });
+                dialog.Categoria = 'Digital'
+                dialog.dialogOpen();
+            }
+        });
 
         return buttons;
     }

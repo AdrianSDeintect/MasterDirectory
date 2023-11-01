@@ -12,11 +12,13 @@ public class CategoriaMerchandisingColumns
 {
     [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
     public string LocalSap { get; set; }
+    public string ClasificacionNacional { get; set; }
     [LookupEditor(typeof(CatMerchaLookup), FilterField = "IdtipoCatalogo", FilterValue = 1), LookupInclude]
     public string TipoSucursal { get; set; }
     public string M2Calc { get; set; }
     public string RutaDli { get; set; }
     public string TipoSenalizacion { get; set; }
+    public string RampaDiscapa { get; set; }
     public string ScreenDisplay { get; set; }
     public string TramosLisos { get; set; }
     public string TamanoMiniheders { get; set; }
@@ -39,7 +41,7 @@ public class CategoriaMerchandisingColumns
     public string MedidasPecheras { get; set; }
     public string MedidaCopete { get; set; }
     public string MedidasCanceleria { get; set; }
-    public string RampaDiscapa { get; set; }
-
+    
+    
     //public DateTime DtRegistro { get; set; }
 }

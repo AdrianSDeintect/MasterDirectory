@@ -29,7 +29,7 @@ public sealed class CategoriaTesoreriaRow : Row<CategoriaTesoreriaRow.RowFields>
         set => fields.Cajero[this] = value;
     }
 
-    //[DisplayName("Dt Registro"), Column("dtRegistro"), NotNull]
+    //[DisplayName("Fecha Registro"), Column("dtRegistro"), NotNull, SortOrder(-1) ]
     //public DateTime? DtRegistro
     //{
     //    get => fields.DtRegistro[this];

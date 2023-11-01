@@ -10,6 +10,7 @@ export interface CategoriaMerchandisingForm {
     TramosLisos: LookupEditor;
     Checkout: LookupEditor;
     RampaDiscapa: LookupEditor;
+    ClasificacionNacional: LookupEditor;
     M2Calc: LookupEditor;
     MedidaCabecera: LookupEditor;
     EndCap: LookupEditor;
@@ -55,6 +56,7 @@ export class CategoriaMerchandisingForm extends PrefixedContext {
                 'TramosLisos', w1,
                 'Checkout', w1,
                 'RampaDiscapa', w1,
+                'ClasificacionNacional', w1,
                 'M2Calc', w1,
                 'MedidaCabecera', w1,
                 'EndCap', w1,

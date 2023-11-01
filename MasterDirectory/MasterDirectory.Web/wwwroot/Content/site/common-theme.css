@@ -69,6 +69,7 @@ html {
 }
 
 .s-sidebar-header-link {
+    color: #0090d9;
     margin-right: 1.5rem;
     font-size: 21px;
 }
@@ -141,8 +142,8 @@ html {
 }
 
 .s-sidebar-header {
-  background-color: #2667B2;
-  border-bottom: 1px solid #e8e9ea;
+/*  background-color: #2667B2;
+  border-bottom: 1px solid #e8e9ea;*/
   border: none;
   height: 48px !important;
   display: flex;
@@ -336,7 +337,7 @@ body {
 }
 
 section.content {
-    padding: 1.25rem;
+    /*padding: 1.25rem;*/
     min-height: calc(100vh - 50px);
 }
 
