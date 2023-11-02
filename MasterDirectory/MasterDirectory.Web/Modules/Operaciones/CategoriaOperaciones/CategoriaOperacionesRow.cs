@@ -54,7 +54,7 @@ public sealed class CategoriaOperacionesRow : Row<CategoriaOperacionesRow.RowFie
         set => fields.Geo[this] = value;
     }
 
-    [Column("MailGeo"), DisplayName("email GEO"), Size(50)]
+    [Column("MailGeo"), DisplayName("email GEO"), Size(100)]
     public string MailGeo
     {
         get => fields.MailGeo[this];

@@ -102,7 +102,7 @@ public class CategoriaOperacionesEndpoint : ServiceEndpoint
             {
                 var Exits = true;
 
-                var LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? "");
+                var LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? "");
                 if (LocalSap.IsTrimmedEmpty())
                     continue;
 
@@ -113,16 +113,16 @@ public class CategoriaOperacionesEndpoint : ServiceEndpoint
 
                 RowExcel = new MyRow
                 {
-                    LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? ""),
-                    Region = Convert.ToString(worksheet.Cells[row, 2].Value ?? ""),
-                    EdoLocal = Convert.ToString(worksheet.Cells[row, 3].Value ?? ""),
-                    Zona = Convert.ToString(worksheet.Cells[row, 4].Value ?? ""),
-                    Geo = Convert.ToString(worksheet.Cells[row, 5].Value ?? ""),
-                    MailGeo = Convert.ToString(worksheet.Cells[row, 6].Value ?? ""),
-                    DirectorRegional = Convert.ToString(worksheet.Cells[row, 7].Value ?? ""),
-                    HorarioLv = Convert.ToString(worksheet.Cells[row, 8].Value ?? ""),
-                    HorarioS = Convert.ToString(worksheet.Cells[row, 9].Value ?? ""),
-                    HorarioDyF = Convert.ToString(worksheet.Cells[row, 10].Value ?? "")
+                    LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? ""),
+                    Region = (worksheet.Cells[row, 2].Value.ToString().Trim() ?? ""),
+                    EdoLocal = (worksheet.Cells[row, 3].Value.ToString().Trim() ?? ""),
+                    Zona = (worksheet.Cells[row, 4].Value.ToString().Trim() ?? ""),
+                    Geo = (worksheet.Cells[row, 5].Value.ToString().Trim() ?? ""),
+                    MailGeo = (worksheet.Cells[row, 6].Value.ToString().Trim() ?? ""),
+                    DirectorRegional = (worksheet.Cells[row, 7].Value.ToString().Trim() ?? ""),
+                    HorarioLv = (worksheet.Cells[row, 8].Value.ToString().Trim() ?? ""),
+                    HorarioS = (worksheet.Cells[row, 9].Value.ToString().Trim() ?? ""),
+                    HorarioDyF = (worksheet.Cells[row, 10].Value.ToString().Trim() ?? "")
                 };
 
                 if (Exits == false)

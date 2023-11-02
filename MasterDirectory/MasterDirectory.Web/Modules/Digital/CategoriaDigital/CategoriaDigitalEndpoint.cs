@@ -102,7 +102,7 @@ public class CategoriaDigitalEndpoint : ServiceEndpoint
             {
                 var Exits = true;
 
-                var LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? "");
+                var LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? "");
                 if (LocalSap.IsTrimmedEmpty())
                     continue;
 
@@ -112,11 +112,11 @@ public class CategoriaDigitalEndpoint : ServiceEndpoint
 
                 RowExcel = new MyRow
                 {
-                    LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? ""),
-                    DirGoogle = Convert.ToString(worksheet.Cells[row, 2].Value ?? ""),
-                    Latitud = Convert.ToString(worksheet.Cells[row, 3].Value ?? ""),
-                    Longitud = Convert.ToString(worksheet.Cells[row, 4].Value ?? ""),
-                    LinkGoogleMaps = Convert.ToString(worksheet.Cells[row, 5].Value ?? "")
+                    LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? ""),
+                    DirGoogle = (worksheet.Cells[row, 2].Value.ToString().Trim() ?? ""),
+                    Latitud = (worksheet.Cells[row, 3].Value.ToString().Trim() ?? ""),
+                    Longitud = (worksheet.Cells[row, 4].Value.ToString().Trim() ?? ""),
+                    LinkGoogleMaps = (worksheet.Cells[row, 5].Value.ToString().Trim() ?? "")
                 };
 
                 if (Exits == false)

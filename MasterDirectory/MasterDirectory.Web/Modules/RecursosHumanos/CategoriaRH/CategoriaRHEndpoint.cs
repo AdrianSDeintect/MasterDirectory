@@ -103,7 +103,7 @@ public class CategoriaRHEndpoint : ServiceEndpoint
             {
                 var Exits = true;
                 
-                var LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? "");
+                var LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? "");
                 if (LocalSap.IsTrimmedEmpty())
                     continue;
 
@@ -114,9 +114,9 @@ public class CategoriaRHEndpoint : ServiceEndpoint
 
                 RowExcel = new MyRow
                 {
-                    LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? ""),
-                    Plantilla = Convert.ToString(worksheet.Cells[row, 2].Value ?? ""),
-                    Vacantes = Convert.ToString(worksheet.Cells[row, 3].Value ?? "")
+                    LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? ""),
+                    Plantilla = (worksheet.Cells[row, 2].Value.ToString().Trim() ?? ""),
+                    Vacantes = (worksheet.Cells[row, 3].Value.ToString().Trim() ?? "")
                 };
 
                 if (Exits == false)

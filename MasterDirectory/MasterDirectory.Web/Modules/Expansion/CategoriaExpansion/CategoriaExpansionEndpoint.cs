@@ -103,7 +103,7 @@ public class CategoriaExpansionEndpoint : ServiceEndpoint
             {
                 var Exits = true;
 
-                var LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? "");
+                var LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? "");
                 if (LocalSap.IsTrimmedEmpty())
                     continue;
 
@@ -113,27 +113,27 @@ public class CategoriaExpansionEndpoint : ServiceEndpoint
 
                 RowExcel = new MyRow
                 {
-                    LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? ""),
-                    Farmacia = Convert.ToString(worksheet.Cells[row, 2].Value ?? ""),
-                    FechaApertura = Convert.ToDateTime(worksheet.Cells[row, 3].Value ?? ""),
-                    LocationType = Convert.ToString(worksheet.Cells[row, 4].Value ?? ""),
-                    Reapertura = worksheet.Cells[row, 5].Value == null ? null : Convert.ToDateTime(worksheet.Cells[row, 5].Value),
-                    Comsuc = Convert.ToString(worksheet.Cells[row, 6].Value ?? ""),
-                    TipoEstaciona = Convert.ToString(worksheet.Cells[row, 7].Value ?? ""),
-                    NCajonesEstaciona = Convert.ToString(worksheet.Cells[row, 8].Value ?? ""),
-                    Ciudad = Convert.ToString(worksheet.Cells[row, 9].Value ?? ""),
-                    Estado = Convert.ToString(worksheet.Cells[row, 10].Value ?? ""),
-                    Direccion = Convert.ToString(worksheet.Cells[row, 11].Value ?? ""),
-                    NExterior = Convert.ToString(worksheet.Cells[row, 12].Value ?? ""),
-                    Colonia = Convert.ToString(worksheet.Cells[row, 13].Value ?? ""),
-                    Cp = Convert.ToString(worksheet.Cells[row, 14].Value ?? ""),
-                    Latitud = Convert.ToString(worksheet.Cells[row, 15].Value ?? ""),
-                    Longuitud = Convert.ToString(worksheet.Cells[row, 16].Value ?? ""),
-                    FormatoFarmAlcance = Convert.ToString(worksheet.Cells[row, 17].Value ?? ""),
-                    Pantallas = Convert.ToString(worksheet.Cells[row, 18].Value ?? ""),
-                    ProvMobiliario = Convert.ToString(worksheet.Cells[row, 19].Value ?? ""),
-                    ColorMob = Convert.ToString(worksheet.Cells[row, 20].Value ?? ""),
-                    Dermo = Convert.ToString(worksheet.Cells[row, 21].Value ?? "")
+                    LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? ""),
+                    Farmacia = (worksheet.Cells[row, 2].Value.ToString().Trim() ?? ""),
+                    FechaApertura = Convert.ToDateTime(worksheet.Cells[row, 3].Value.ToString().Trim() ?? ""),
+                    LocationType = (worksheet.Cells[row, 4].Value.ToString().Trim() ?? ""),
+                    Reapertura = worksheet.Cells[row, 5].Value.ToString().Trim() == null ? null : Convert.ToDateTime(worksheet.Cells[row, 5].Value.ToString().Trim()),
+                    Comsuc = (worksheet.Cells[row, 6].Value.ToString().Trim() ?? ""),
+                    TipoEstaciona = (worksheet.Cells[row, 7].Value.ToString().Trim() ?? ""),
+                    NCajonesEstaciona = (worksheet.Cells[row, 8].Value.ToString().Trim() ?? ""),
+                    Ciudad = (worksheet.Cells[row, 9].Value.ToString().Trim() ?? ""),
+                    Estado = (worksheet.Cells[row, 10].Value.ToString().Trim() ?? ""),
+                    Direccion = (worksheet.Cells[row, 11].Value.ToString().Trim() ?? ""),
+                    NExterior = (worksheet.Cells[row, 12].Value.ToString().Trim() ?? ""),
+                    Colonia = (worksheet.Cells[row, 13].Value.ToString().Trim() ?? ""),
+                    Cp = (worksheet.Cells[row, 14].Value.ToString().Trim() ?? ""),
+                    Latitud = (worksheet.Cells[row, 15].Value.ToString().Trim() ?? ""),
+                    Longuitud = (worksheet.Cells[row, 16].Value.ToString().Trim() ?? ""),
+                    FormatoFarmAlcance = (worksheet.Cells[row, 17].Value.ToString().Trim() ?? ""),
+                    Pantallas = (worksheet.Cells[row, 18].Value.ToString().Trim() ?? ""),
+                    ProvMobiliario = (worksheet.Cells[row, 19].Value.ToString().Trim() ?? ""),
+                    ColorMob = (worksheet.Cells[row, 20].Value.ToString().Trim() ?? ""),
+                    Dermo = (worksheet.Cells[row, 21].Value.ToString().Trim() ?? "")
                 };
 
                 if (Exits == false)

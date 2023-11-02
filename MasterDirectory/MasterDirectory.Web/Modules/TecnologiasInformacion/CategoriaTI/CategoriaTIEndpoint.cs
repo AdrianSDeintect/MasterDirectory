@@ -102,7 +102,7 @@ public class CategoriaTIEndpoint : ServiceEndpoint
             {
                 var Exits = true;
 
-                var LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? "");
+                var LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? "");
                 if (LocalSap.IsTrimmedEmpty())
                     continue;
 
@@ -112,11 +112,11 @@ public class CategoriaTIEndpoint : ServiceEndpoint
 
                 RowExcel = new MyRow
                 {
-                    LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? ""),
-                    UsuarioGeo = Convert.ToString(worksheet.Cells[row, 2].Value ?? ""),
-                    Emaillocal = Convert.ToString(worksheet.Cells[row, 3].Value ?? ""),
-                    Extension = Convert.ToString(worksheet.Cells[row, 4].Value ?? ""),
-                    Telefono = Convert.ToString(worksheet.Cells[row, 5].Value ?? "")
+                    LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? ""),
+                UsuarioGeo = (worksheet.Cells[row, 2].Value.ToString().Trim() ?? ""),
+                    Emaillocal = (worksheet.Cells[row, 3].Value.ToString().Trim() ?? ""),
+                    Extension = (worksheet.Cells[row, 4].Value.ToString().Trim() ?? ""),
+                    Telefono = (worksheet.Cells[row, 5].Value.ToString().Trim() ?? "")
                 };
 
                 if (Exits == false)

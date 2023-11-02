@@ -102,7 +102,7 @@ public class CategoriaUltimaMillaEndpoint : ServiceEndpoint
             {
                 var Exits = true;
 
-                var LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? "");
+                var LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? "");
                 if (LocalSap.IsTrimmedEmpty())
                     continue;
 
@@ -112,43 +112,43 @@ public class CategoriaUltimaMillaEndpoint : ServiceEndpoint
 
                 RowExcel = new MyRow
                 {
-                    LocalSap = Convert.ToString(worksheet.Cells[row, 1].Value ?? ""),
-                    Estado = Convert.ToString(worksheet.Cells[row, 2].Value ?? ""),
-                    Prov99Min = Convert.ToString(worksheet.Cells[row, 3].Value ?? ""),
-                    ProvMu = Convert.ToString(worksheet.Cells[row, 4].Value ?? ""),
-                    ProvCid = Convert.ToString(worksheet.Cells[row, 5].Value ?? ""),
-                    ProvRappiCargo = Convert.ToString(worksheet.Cells[row, 6].Value ?? ""),
-                    VentaTelf99Min = Convert.ToString(worksheet.Cells[row, 7].Value ?? ""),
-                    VentaTelfMu = Convert.ToString(worksheet.Cells[row, 8].Value ?? ""),
-                    VentaTelfCid = Convert.ToString(worksheet.Cells[row, 9].Value ?? ""),
-                    VentaTelfRappiCargo = Convert.ToString(worksheet.Cells[row, 10].Value ?? ""),
-                    Garantizado99Min = Convert.ToString(worksheet.Cells[row, 11].Value ?? ""),
-                    GarantizadoMu = Convert.ToString(worksheet.Cells[row, 12].Value ?? ""),
-                    GarantizadoCid = Convert.ToString(worksheet.Cells[row, 13].Value ?? ""),
-                    ECommerceDelivery = Convert.ToString(worksheet.Cells[row, 14].Value ?? ""),
-                    ECommerceClickCollect = Convert.ToString(worksheet.Cells[row, 15].Value ?? ""),
-                    ECommerceTipo = Convert.ToString(worksheet.Cells[row, 16].Value ?? ""),
-                    Fijo99Min = Convert.ToString(worksheet.Cells[row, 17].Value ?? ""),
-                    FijoMu = Convert.ToString(worksheet.Cells[row, 18].Value ?? ""),
-                    FijoCid = Convert.ToString(worksheet.Cells[row, 19].Value ?? ""),
-                    OnDemandMu = Convert.ToString(worksheet.Cells[row, 20].Value ?? ""),
-                    OnDemandRappiCargo = Convert.ToString(worksheet.Cells[row, 21].Value ?? ""),
-                    CanalesDigitalesRappi = Convert.ToString(worksheet.Cells[row, 22].Value ?? ""),
-                    CanalesDigitalesUber = Convert.ToString(worksheet.Cells[row, 23].Value ?? ""),
-                    ServicioEfectivo1 = Convert.ToString(worksheet.Cells[row, 24].Value ?? ""),
-                    ServicioEfectivo2 = Convert.ToString(worksheet.Cells[row, 25].Value ?? ""),
-                    ServicioEfectivo3 = Convert.ToString(worksheet.Cells[row, 26].Value ?? ""),
-                    ServicioEfectivo4 = Convert.ToString(worksheet.Cells[row, 27].Value ?? ""),
-                    ServicioEfectivo5 = Convert.ToString(worksheet.Cells[row, 28].Value ?? ""),
-                    ServicioEfectivo6 = Convert.ToString(worksheet.Cells[row, 29].Value ?? ""),
-                    ServicioEfectivo7 = Convert.ToString(worksheet.Cells[row, 30].Value ?? ""),
-                    ServicioEfectivo8 = Convert.ToString(worksheet.Cells[row, 31].Value ?? ""),
-                    ServicioTarjeta9 = Convert.ToString(worksheet.Cells[row, 32].Value ?? ""),
-                    ServicioTarjeta10 = Convert.ToString(worksheet.Cells[row, 33].Value ?? ""),
-                    ServicioTarjeta11 = Convert.ToString(worksheet.Cells[row, 34].Value ?? ""),
-                    ServicioTarjeta12 = Convert.ToString(worksheet.Cells[row, 35].Value ?? ""),
-                    InicioServicio = Convert.ToString(worksheet.Cells[row, 36].Value ?? ""),
-                    CierreServicio = Convert.ToString(worksheet.Cells[row, 37].Value ?? "")
+                    LocalSap = (worksheet.Cells[row, 1].Value.ToString().Trim() ?? ""),
+                    Estado = (worksheet.Cells[row, 2].Value.ToString().Trim() ?? ""),
+                    Prov99Min = (worksheet.Cells[row, 3].Value.ToString().Trim() ?? ""),
+                    ProvMu = (worksheet.Cells[row, 4].Value.ToString().Trim() ?? ""),
+                    ProvCid = (worksheet.Cells[row, 5].Value.ToString().Trim() ?? ""),
+                    ProvRappiCargo = (worksheet.Cells[row, 6].Value.ToString().Trim() ?? ""),
+                    VentaTelf99Min = (worksheet.Cells[row, 7].Value.ToString().Trim() ?? ""),
+                    VentaTelfMu = (worksheet.Cells[row, 8].Value.ToString().Trim() ?? ""),
+                    VentaTelfCid = (worksheet.Cells[row, 9].Value.ToString().Trim() ?? ""),
+                    VentaTelfRappiCargo = (worksheet.Cells[row, 10].Value.ToString().Trim() ?? ""),
+                    Garantizado99Min = (worksheet.Cells[row, 11].Value.ToString().Trim() ?? ""),
+                    GarantizadoMu = (worksheet.Cells[row, 12].Value.ToString().Trim() ?? ""),
+                    GarantizadoCid = (worksheet.Cells[row, 13].Value.ToString().Trim() ?? ""),
+                    ECommerceDelivery = (worksheet.Cells[row, 14].Value.ToString().Trim() ?? ""),
+                    ECommerceClickCollect = (worksheet.Cells[row, 15].Value.ToString().Trim() ?? ""),
+                    ECommerceTipo = (worksheet.Cells[row, 16].Value.ToString().Trim() ?? ""),
+                    Fijo99Min = (worksheet.Cells[row, 17].Value.ToString().Trim() ?? ""),
+                    FijoMu = (worksheet.Cells[row, 18].Value.ToString().Trim() ?? ""),
+                    FijoCid = (worksheet.Cells[row, 19].Value.ToString().Trim() ?? ""),
+                    OnDemandMu = (worksheet.Cells[row, 20].Value.ToString().Trim() ?? ""),
+                    OnDemandRappiCargo = (worksheet.Cells[row, 21].Value.ToString().Trim() ?? ""),
+                    CanalesDigitalesRappi = (worksheet.Cells[row, 22].Value.ToString().Trim() ?? ""),
+                    CanalesDigitalesUber = (worksheet.Cells[row, 23].Value.ToString().Trim() ?? ""),
+                    ServicioEfectivo1 = (worksheet.Cells[row, 24].Value.ToString().Trim() ?? ""),
+                    ServicioEfectivo2 = (worksheet.Cells[row, 25].Value.ToString().Trim() ?? ""),
+                    ServicioEfectivo3 = (worksheet.Cells[row, 26].Value.ToString().Trim() ?? ""),
+                    ServicioEfectivo4 = (worksheet.Cells[row, 27].Value.ToString().Trim() ?? ""),
+                    ServicioEfectivo5 = (worksheet.Cells[row, 28].Value.ToString().Trim() ?? ""),
+                    ServicioEfectivo6 = (worksheet.Cells[row, 29].Value.ToString().Trim() ?? ""),
+                    ServicioEfectivo7 = (worksheet.Cells[row, 30].Value.ToString().Trim() ?? ""),
+                    ServicioEfectivo8 = (worksheet.Cells[row, 31].Value.ToString().Trim() ?? ""),
+                    ServicioTarjeta9 = (worksheet.Cells[row, 32].Value.ToString().Trim() ?? ""),
+                    ServicioTarjeta10 = (worksheet.Cells[row, 33].Value.ToString().Trim() ?? ""),
+                    ServicioTarjeta11 = (worksheet.Cells[row, 34].Value.ToString().Trim() ?? ""),
+                    ServicioTarjeta12 = (worksheet.Cells[row, 35].Value.ToString().Trim() ?? ""),
+                    InicioServicio = (worksheet.Cells[row, 36].Value.ToString().Trim() ?? ""),
+                    CierreServicio = (worksheet.Cells[row, 37].Value.ToString().Trim() ?? "")
                 };
 
                 if (Exits == false)
